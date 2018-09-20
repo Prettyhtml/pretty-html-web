@@ -4,7 +4,7 @@ Offline Formatter for your Angular, Vue, Svelte or pure HTML5 codes.
 
 Live: [prettyhtml.netlify.com](https://prettyhtml.netlify.com)
 
-![Screenshot of prettyhtml](src/assets/screenshot.png)
+![Screenshot of prettyhtml](src/assets/screenshot.jpg)
 
 ## About
 
