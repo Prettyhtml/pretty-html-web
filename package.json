@@ -4,19 +4,29 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "yarn bundle && vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "bundle": "node ./scripts/browserified-prettyhtml.js"
   },
   "dependencies": {
-    "register-service-worker": "^1.0.0",
-    "vue": "^2.5.17"
+    "prismjs": "^1.15.0",
+    "register-service-worker": "^1.5.2",
+    "tailwindcss": "^0.6.5",
+    "vue": "^2.5.17",
+    "vue-prism-editor": "^0.1.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0",
-    "@vue/cli-plugin-eslint": "^3.0.0",
-    "@vue/cli-plugin-pwa": "^3.0.0",
-    "@vue/cli-service": "^3.0.0",
-    "@vue/eslint-config-prettier": "^3.0.1",
-    "vue-template-compiler": "^2.5.17"
+    "@fullhuman/postcss-purgecss": "^1.1.0",
+    "@starptech/prettyhtml": "^0.0.60",
+    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-plugin-eslint": "^3.0.3",
+    "@vue/cli-plugin-pwa": "^3.0.3",
+    "@vue/cli-service": "3.0.3",
+    "@vue/eslint-config-prettier": "^3.0.3",
+    "browserify": "^16.2.2",
+    "purgecss-whitelister": "^2.1.0",
+    "uglify-es": "^3.3.9",
+    "vue-template-compiler": "^2.5.17",
+    "workerize-loader": "^1.0.4"
   }
 }
