@@ -97,7 +97,7 @@
               >Pretty-Html</a>
               <br>Source code on
               <a
-                href="https://github.com/koca/pretty-html-web"
+                href="https://github.com/Prettyhtml/pretty-html-web"
                 class="no-underline text-grey-dark font-bold"
                 target="_blank"
               >GitHub</a>
