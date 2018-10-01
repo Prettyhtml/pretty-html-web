@@ -742,23 +742,23 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.2.tgz#54c5a964462be3d4d78af631363c18d6fa91ac26"
   integrity sha512-yprFYuno9FtNsSHVlSWd+nRlmGoAbqbeCwOryP6sC/zoCjhpArcRMYp19EvpSUSizJAlsXEwJv+wcWS9XaXdMw==
 
-"@starptech/hast-util-from-webparser@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@starptech/hast-util-from-webparser/-/hast-util-from-webparser-0.1.5.tgz#840d06fb3b6129d401dfce50e08b490f58ae6d6b"
-  integrity sha512-o9pafVjpL2/XC4TOdzS8Eq0vcMSG17rFfRz9CV+G3ynSB5pV6ZBzrELdtWUQ686a/cWcnfPeaYFp1E9661cydw==
+"@starptech/hast-util-from-webparser@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@starptech/hast-util-from-webparser/-/hast-util-from-webparser-0.1.7.tgz#f0369233db7d0b50376ca8da8808567252bebaf8"
+  integrity sha512-ym3zx76NiDL4tNLcQ7gPX/ipo6TJqq/YLGXQDfF/SlsVpOOsVs+2y97ZzIltJ6nzTsvJMDSVqQ+1IgPLp+agrw==
   dependencies:
-    "@starptech/prettyhtml-hastscript" "^0.1.5"
-    "@starptech/webparser" "^0.1.5"
+    "@starptech/prettyhtml-hastscript" "^0.1.7"
+    "@starptech/webparser" "^0.1.7"
     property-information "^4.2.0"
 
-"@starptech/prettyhtml-formatter@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.1.5.tgz#6240e2af4f5dd9bc9fef443af87495e7aa77c526"
-  integrity sha512-oUui8J5hiBWqeN+QuXnXO1DG6LXYTGVRIZNGU7cO8TlyuO7TaMma21Pgcg/bne+RZmFLI28SkJnsYnYAYRyF1g==
+"@starptech/prettyhtml-formatter@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.1.7.tgz#fdfead23ad525b8a9a84062d1842ea4c629bd9f5"
+  integrity sha512-XrLUCTKLOwuTinK6UvUJQnmKI3AbFu1Vo9UWH9JMGP4SC/NkaS4ZVgNIIxjvkHCWg7k2HEAXQDaUhS4EIyommw==
   dependencies:
-    "@starptech/prettyhtml-hast-to-html" "^0.1.5"
-    "@starptech/rehype-webparser" "^0.1.5"
-    "@starptech/webparser" "^0.1.5"
+    "@starptech/prettyhtml-hast-to-html" "^0.1.7"
+    "@starptech/rehype-webparser" "^0.1.7"
+    "@starptech/webparser" "^0.1.7"
     hast-util-is-element "^1.0.1"
     hast-util-to-string "^1.0.1"
     html-void-elements "^1.0.3"
@@ -774,10 +774,10 @@
     unist-util-visit-parents "^2.0.1"
     xtend "^4.0.1"
 
-"@starptech/prettyhtml-hast-to-html@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hast-to-html/-/prettyhtml-hast-to-html-0.1.5.tgz#32b897b5963ace63ef11dd27c15b7cbe1655ed29"
-  integrity sha512-w7Ak6vB3gFIVRZZG+qh3O9OY8Fa1EDdor7bLl2Eal6SNdXkmHqtAh77yVh/dcYFYGK1YeGmYQCVuAvG7GvOPrg==
+"@starptech/prettyhtml-hast-to-html@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hast-to-html/-/prettyhtml-hast-to-html-0.1.7.tgz#8c9e0cfe27382670e63bd60696a3ff9170729863"
+  integrity sha512-YT/mbgrnpTaQQ7ipXR0CnoBvmar6VRo5v4v6KoxD3+eOhq4sv4LBabIOSHXCLN5dcmqRAaBnNJKR7dY0HD4IeA==
   dependencies:
     ccount "^1.0.3"
     comma-separated-tokens "^1.0.5"
@@ -791,24 +791,24 @@
     unist-util-is "^2.1.2"
     xtend "^4.0.1"
 
-"@starptech/prettyhtml-hastscript@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hastscript/-/prettyhtml-hastscript-0.1.5.tgz#7287fd16900ba753c203d3aabfa11a95a887da5b"
-  integrity sha512-5J+0cuQ02yLLwaEz8v8FbkpfQCSjNP9vUk6zMuZngnObPXg2ATRUoXMbuMj+iqkTafLHwelk6y8nbIIOf0tk3A==
+"@starptech/prettyhtml-hastscript@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hastscript/-/prettyhtml-hastscript-0.1.7.tgz#9997f710ad0e19547f88120e7fa97e7d53b0f961"
+  integrity sha512-YbxlU8/rD424WYY1omxMtTagrAlBrnhlQaNkeg4s952URw5Dh+iydf0FDtkgnHvItI8Q0wonbZhF6UgbbokHmQ==
   dependencies:
     comma-separated-tokens "^1.0.5"
     hast-util-parse-selector "^2.2.0"
     property-information "^4.2.0"
     space-separated-tokens "^1.1.2"
 
-"@starptech/prettyhtml@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.1.6.tgz#859fbdf7df2673ca5fa396c84c026f91ac9896de"
-  integrity sha512-35Bzp6xrR82/jkODjZAAy1G2ovk4Et+HNTVq3DYHNQKKQFvKenxwG9l9BNT5An14FiUnoOjFDC3/DevX0O8NTQ==
+"@starptech/prettyhtml@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.1.7.tgz#d737378b10ee15c6b48c176586477bb078b186fe"
+  integrity sha512-hsJo7+H4xlKuoWvZzbBsTC5psJ1v0W3j1h6oLjZn/nsKApkJTbK35Labx2BLDZsW8OftDGbw2m6pYBTaLl2NQA==
   dependencies:
-    "@starptech/prettyhtml-formatter" "^0.1.5"
-    "@starptech/rehype-webparser" "^0.1.5"
-    "@starptech/webparser" "^0.1.5"
+    "@starptech/prettyhtml-formatter" "^0.1.7"
+    "@starptech/rehype-webparser" "^0.1.7"
+    "@starptech/webparser" "^0.1.7"
     meow "^5.0.0"
     prettier "^1.14.3"
     rehype-sort-attribute-values "^1.0.1"
@@ -818,19 +818,19 @@
     vfile "^3.0.0"
     vfile-reporter "^5.0.0"
 
-"@starptech/rehype-webparser@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@starptech/rehype-webparser/-/rehype-webparser-0.1.5.tgz#34ebef3467462d696cb768a6cab9340d70944056"
-  integrity sha512-pcpMUk3vwiZBsWBpTO+rW5PrnS32Qe+cLP//wio/eBV8mm8BGYXYkN6KdeF7CeqQ5WYrRJfe4VPMCDDRRksQLg==
+"@starptech/rehype-webparser@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@starptech/rehype-webparser/-/rehype-webparser-0.1.7.tgz#0aa0039722055fd4cca29d597435a08f0a5bc9ba"
+  integrity sha512-pFqzx2JGP5rQuzLMlK5hNfmFEwGj+rgUA/82qGkZ+y0b4V32choN52W70Abzyca2mHOWX6x3bc41GMp7mAZZ2w==
   dependencies:
-    "@starptech/hast-util-from-webparser" "^0.1.5"
-    "@starptech/webparser" "^0.1.5"
+    "@starptech/hast-util-from-webparser" "^0.1.7"
+    "@starptech/webparser" "^0.1.7"
     vfile-message "^1.0.1"
 
-"@starptech/webparser@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@starptech/webparser/-/webparser-0.1.5.tgz#8017c84e49ba6449a6594b26cc9e64bf09410465"
-  integrity sha512-X7rLAdugCfw0DHXLNKiuDqsebwEWxEyi4yXk9mY+1VLk/e4I6z13n4S+dFFs3jflzN8ty8MSgvuaZaLHl3pzxg==
+"@starptech/webparser@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@starptech/webparser/-/webparser-0.1.7.tgz#30b21113320ffa57327a9d9a0a5350642dbe2eca"
+  integrity sha512-hXyhypSH/XYDNKgiAg2sCA8GCiZEsFMfOHCAE3dyNl4O9kiyXRJy9Gu4Rd22BYKEgBX/phOAprEtOH4AbnsyjA==
 
 "@vue/babel-preset-app@^3.0.1":
   version "3.0.1"
@@ -4791,7 +4791,7 @@ is-buffer@^2.0.0:
 
 is-builtin-module@^1.0.0:
   version "1.0.0"
-  resolved "http://registry.npmjs.org/is-builtin-module/-/is-builtin-module-1.0.0.tgz#540572d34f7ac3119f8f76c30cbc1b1e037affbe"
+  resolved "https://registry.yarnpkg.com/is-builtin-module/-/is-builtin-module-1.0.0.tgz#540572d34f7ac3119f8f76c30cbc1b1e037affbe"
   integrity sha1-VAVy0096wxGfj3bDDLwbHgN6/74=
   dependencies:
     builtin-modules "^1.0.0"
@@ -4983,7 +4983,7 @@ is-number@^4.0.0:
 
 is-obj@^1.0.0, is-obj@^1.0.1:
   version "1.0.1"
-  resolved "http://registry.npmjs.org/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
+  resolved "https://registry.yarnpkg.com/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
   integrity sha1-PkcprB9f3gJc19g6iW2rn09n2w8=
 
 is-object@^1.0.1:
@@ -5812,7 +5812,7 @@ minimist@^0.1.0:
 
 minimist@^1.1.0, minimist@^1.1.1, minimist@^1.2.0:
   version "1.2.0"
-  resolved "http://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
   integrity sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
 
 minipass@^2.2.1, minipass@^2.3.3:
@@ -7309,7 +7309,7 @@ read-pkg@^4.0.1:
 
 "readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.6, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.2.9, readable-stream@^2.3.3, readable-stream@^2.3.6:
   version "2.3.6"
-  resolved "http://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
   integrity sha512-tQtKA9WIAhBF3+VLAseyMqZeBjW0AHJoxOtYqSUZNJxauErmLbVm2FW1y+J/YA9dUrAC39ITejlZWhVIwawkKw==
   dependencies:
     core-util-is "~1.0.0"
@@ -8069,17 +8069,17 @@ space-separated-tokens@^1.1.2:
     trim "0.0.1"
 
 spdx-correct@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.0.0.tgz#05a5b4d7153a195bc92c3c425b69f3b2a9524c82"
-  integrity sha512-N19o9z5cEyc8yQQPukRCZ9EUmb4HUpnrmaL/fxS2pBo2jbfcFRVuFZ/oFC+vZz0MNNk0h80iMn5/S6qGZOL5+g==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.0.1.tgz#434434ff9d1726b4d9f4219d1004813d80639e30"
+  integrity sha512-hxSPZbRZvSDuOvADntOElzJpenIR7wXJkuoUcUtS0erbgt2fgeaoPIYretfKpslMhfFDY4k0MZ2F5CUzhBsSvQ==
   dependencies:
     spdx-expression-parse "^3.0.0"
     spdx-license-ids "^3.0.0"
 
 spdx-exceptions@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/spdx-exceptions/-/spdx-exceptions-2.1.0.tgz#2c7ae61056c714a5b9b9b2b2af7d311ef5c78fe9"
-  integrity sha512-4K1NsmrlCU1JJgUrtgEeTVyfx8VaYea9J9LvARxhbHtVtohPs/gFGG5yy49beySjlIMhhXZ4QqujIZEfS4l6Cg==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/spdx-exceptions/-/spdx-exceptions-2.2.0.tgz#2ea450aee74f2a89bfb94519c07fcd6f41322977"
+  integrity sha512-2XQACfElKi9SlVb1CYadKDXvoajPgBVPn/gOQLrTvHdElaVhr7ZEbqJaRnJLVNeaI4cMEAgVCeBMKF6MWRDCRA==
 
 spdx-expression-parse@^3.0.0:
   version "3.0.0"
