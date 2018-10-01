@@ -52,12 +52,13 @@
               >
             </div>
           </div>
-          <div class="section-item flex items-center mt-2">
+          <div class="section-item flex items-center mt-2" :class="{'opacity-50': opts.useTabs}">
             <div class="setting-label w-24 text-sm">{{ opts.useTabs ? 'Tab' : 'Space'}} width</div>
             <div class="setting-input w-16 ml-4">
               <input
                 v-model.number="opts.tabWidth"
                 class="bg-grey-darker text-grey-lighter w-full text-sm py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                :disabled="opts.useTabs"
                 type="number"
               >
             </div>
@@ -262,12 +263,12 @@ export default {
 }
 select {
   -webkit-appearance: none;
+  -moz-appearance: none;
 
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23eee' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='feather feather-chevron-down' viewBox='0 0 24 24'%3e %3cpath d='M6 9l6 6 6-6'/%3e %3c/svg%3e");
   background-repeat: no-repeat;
   background-size: 1rem auto;
   background-position: right 0.25rem center;
   padding-right: 1rem;
-
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='#eee' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='feather feather-chevron-down' viewBox='0 0 24 24'%3e %3cpath d='M6 9l6 6 6-6'/%3e %3c/svg%3e");
 }
 </style>
