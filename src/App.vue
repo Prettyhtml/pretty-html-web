@@ -8,7 +8,7 @@
           <img
             src="./assets/logo.png"
             class="-mt-6 -mb-4 -ml-4"
-            alt="pretty html"
+            alt="PrettyHtml"
           >
         </a>
       </h1>

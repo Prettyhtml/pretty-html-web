@@ -1,4 +1,4 @@
-# Pretty HTML
+# PrettyHtml
 
 Offline Formatter for your Angular, Vue, Svelte or pure HTML5 codes.
 
