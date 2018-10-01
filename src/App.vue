@@ -16,7 +16,7 @@
         <div class="section">
           <p
             class="text-sm text-center"
-          >Offline Formatter for your Angular, Vue, Svelte or pure HTML5 codes.</p>
+          >The formatter for the modern web</p>
           <h3
             class="section-name mt-8 font-medium tracking-wide text-xxs text-grey-dark uppercase"
           >Editor</h3>
