@@ -95,7 +95,7 @@
                 href="https://github.com/StarpTech/prettyhtml"
                 class="no-underline text-grey-dark font-bold"
                 target="_blank"
-              >Pretty-Html</a>
+              >Prettyhtml <span id="version">{{prettyHtmlVersion}}</span></a>
               <br>Source code on
               <a
                 href="https://github.com/Prettyhtml/pretty-html-web"
@@ -219,6 +219,7 @@ export default {
   data() {
     return {
       prettifier: null,
+      prettyHtmlVersion: '0.1.9',
       linenumbers: true,
       opts: { ...defaultOpts },
       result: "",
