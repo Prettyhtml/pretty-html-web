@@ -5,7 +5,9 @@ const uglify = require("uglify-es");
 
 const pkgName = "@starptech/prettyhtml";
 const pkgFileName = "prettyhtml.browserified.min.js";
-const pkgPath = path.resolve(__dirname, "../public/" + pkgFileName);
+const pkgOutputFolder =
+  process.env.NODE_ENV === "production" ? "dist" : "public";
+const pkgPath = path.resolve(__dirname, `../${pkgOutputFolder}/${pkgFileName}`);
 const umdName = "prettyhtml";
 
 const b = browserify([require.resolve(pkgName)], {

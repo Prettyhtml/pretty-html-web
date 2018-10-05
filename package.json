@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "yarn bundle && vue-cli-service build",
+    "build": "vue-cli-service build && yarn bundle",
     "lint": "vue-cli-service lint",
     "bundle": "node ./scripts/browserified-prettyhtml.js"
   },
