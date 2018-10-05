@@ -7,7 +7,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <title>PrettyHtml - The formatter for the modern web</title>
+
   <meta name="Description" content="Opinionated general formatter for your Angular, Vue, Svelte or pure HTML5 templates.">
+
+  <!-- OG -->
+  <meta property="og:title" content="PrettyHtml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%= BASE_URL %>" />
+  <meta property="og:image" content="<%= BASE_URL %>img/icons/opengraph.png" />
+  <meta property="og:description" content="Opinionated general formatter for your Angular, Vue, Svelte or pure HTML5 templates" />
+
+  <!-- TW -->
+  <meta name="Description" content="Opinionated general formatter for your Angular, Vue, Svelte or pure HTML5 templates" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PrettyHtml - The formatter for the modern web" />
+  <meta name="twitter:description" content="Opinionated general formatter for your Angular, Vue, Svelte or pure HTML5 templates" />
+  <meta name="twitter:image" content="<%= BASE_URL %>img/icons/opengraph.png" />
+
+
+  <!-- GA -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127092682-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127092682-1');
+  </script>
 </head>
 
 <body>
