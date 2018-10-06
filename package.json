@@ -17,14 +17,14 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
-    "@starptech/prettyhtml": "^0.1.9",
+    "@starptech/prettyhtml": "^0.2.0",
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-plugin-pwa": "^3.0.4",
     "@vue/cli-service": "3.0.4",
     "@vue/eslint-config-prettier": "^3.0.4",
     "browserify": "^16.2.3",
-    "purgecss-whitelister": "^2.1.0",
+    "purgecss-whitelister": "^2.2.0",
     "uglify-es": "^3.3.9",
     "vue-template-compiler": "^2.5.17",
     "workerize-loader": "^1.0.4"

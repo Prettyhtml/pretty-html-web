@@ -1,13 +1,12 @@
 <template>
   <div
-    class="toggle rounded-full overflow-hidden focus:outline-none focus:shadow-outline"
+    class="toggle overflow-hidden flex items-center h-8 w-8 relative focus:outline-none"
     tabindex="0"
     @click="toggle"
     :style="styleObj"
   >
-    <span :class="classObj" class="toggle-input flex items-center w-10 p-1">
-      <span class="rounded-full w-4 h-4 shadow-inner bg-grey-lighter shadow"></span>
-    </span>
+    <span :class="underlayClasses" class="bg-grey rounded-full toggle-input w-8 h-2"></span>
+    <span :class="thumbClasses" class="absolute rounded-full w-4 h-4 bg-black focus:bg-grey"></span>
   </div>
 </template>
 <script>
@@ -28,13 +27,15 @@ export default {
         ? { opacity: ".5", cursor: "not-allowed" }
         : { opacity: "1", cursor: "pointer" };
     },
-    classObj() {
-      const bgColor = this.value ? "bg-green-dark" : "bg-grey-darker";
-      const position = this.value ? "justify-end" : "justify-start";
-      return {
-        [bgColor]: true,
-        [position]: true
-      };
+    underlayClasses() {
+      const classes = this.value ? "bg-purple-light" : "bg-grey";
+      return [classes];
+    },
+    thumbClasses() {
+      const classes = this.value
+        ? "bg-purple border border-purple-dark pin-r"
+        : "bg-white border border-grey pin-l";
+      return [classes];
     }
   },
   methods: {

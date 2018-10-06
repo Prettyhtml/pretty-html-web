@@ -12,13 +12,7 @@
   font-size: 14px;
   line-height: 1.5;
 }
-#version {
-  font-size: 0.7em;
-  line-height: 0;
-  opacity: 0.5;
-  position: relative;
-  top: -3px;
-}
+
 /* Syntax highlighting */
 .token.comment,
 .token.prolog,

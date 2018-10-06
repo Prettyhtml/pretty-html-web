@@ -55,6 +55,14 @@ let colors = {
   "grey-lightest": "#f8fafc",
   white: "#ffffff",
 
+  "purple-darkest": "#460030",
+  "purple-darker": "#590041",
+  "purple-dark": "#63004A",
+  purple: "#76005C",
+  "purple-light": "#BB80AE",
+  "purple-lighter": "#D6B3CE",
+  "purple-lightest": "#EFE0EB",
+
   "red-darkest": "#3b0d0c",
   "red-darker": "#621b18",
   "red-dark": "#cc1f1a",
@@ -110,14 +118,6 @@ let colors = {
   "indigo-light": "#7886d7",
   "indigo-lighter": "#b2b7ff",
   "indigo-lightest": "#e6e8ff",
-
-  "purple-darkest": "#21183c",
-  "purple-darker": "#382b5f",
-  "purple-dark": "#794acf",
-  purple: "#9561e2",
-  "purple-light": "#a779e9",
-  "purple-lighter": "#d6bbfc",
-  "purple-lightest": "#f3ebff",
 
   "pink-darkest": "#451225",
   "pink-darker": "#6f213f",
@@ -193,7 +193,7 @@ module.exports = {
       "system-ui",
       "BlinkMacSystemFont",
       "-apple-system",
-      "Segoe UI",
+      // "Segoe UI",
       "Roboto",
       "Oxygen",
       "Ubuntu",
@@ -727,7 +727,8 @@ module.exports = {
     md: "0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)",
     lg: "0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)",
     inner: "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
-    outline: "0 0 0 3px rgba(52,144,220,0.5)",
+    outline: "0 0 0 3px rgba(220, 50, 141, 0.3)",
+    // outline: "0 0 0 3px rgba(52,144,220,0.5)",
     none: "none"
   },
 
