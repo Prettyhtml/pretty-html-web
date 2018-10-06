@@ -93,13 +93,13 @@
             <p class="text-sm font-normal">
               Offline Playground for
               <a
-                href="https://github.com/StarpTech/prettyhtml"
+                href="https://github.com/prettyhtml/prettyhtml"
                 class="no-underline font-bold text-grey-dark"
                 target="_blank"
               >Prettyhtml</a>
               <br>Source code on
               <a
-                href="https://github.com/Prettyhtml/pretty-html-web"
+                href="https://github.com/prettyhtml/pretty-html-web"
                 class="no-underline font-bold text-grey-dark"
                 target="_blank"
               >GitHub</a>
