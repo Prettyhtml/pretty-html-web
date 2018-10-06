@@ -165,9 +165,10 @@
             <h3 class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase">Source</h3>
             <button
               @click="clear"
-              class="absolute text-grey-dark flex items-center pin-r pin-t -mt-2 p-1 font-normal hover:text-grey-darkest rounded mx-1 focus:outline-none focus:shadow-outline"
+              class="absolute text-grey-dark flex items-center pin-r pin-t -mt-2 mr-2 p-1 font-normal hover:text-grey-darkest rounded mx-1 focus:outline-none focus:shadow-outline"
+              title="clear text"
             >
-            <svg class="w-4 h-4 mt-px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <svg class="w-4 h-4 mt-px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
           </header>
           <prism-editor
@@ -181,9 +182,15 @@
         <div
           class="output border-l-2 flex-no-shrink flex-1 flex flex-col overflow-hidden pt-4"
         >
-          <h3
-            class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase"
-          >Output</h3>
+          <header class="flex relative">
+            <h3 class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase">Output</h3>
+            <button
+              class="btn-copy absolute text-grey-dark flex items-center pin-r pin-t -mt-2 mr-2 p-1 font-normal uppercase text-xs hover:text-grey-darkest rounded mx-1 focus:outline-none focus:shadow-outline group"
+            >
+            <span class="opacity-0 font-semibold mr-2 text-grey-dark group-hover:opacity-100">Copy to clipboard</span>
+            <svg class="w-5 h-5 mt-px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+            </button>
+          </header>
           <prism-editor
             class="my-editor mt-4 px-2 focus:outline-none"
             :code="result"
@@ -200,6 +207,7 @@
 
 <script>
 import "vue-prism-editor/dist/VuePrismEditor.css";
+import ClipboardJS from "clipboard";
 import "./assets/styles.css";
 import { startWorkers, getWorkers } from "./workers";
 import PrismEditor from "vue-prism-editor";
@@ -232,6 +240,9 @@ export default {
   },
   async mounted() {
     this.prettifier = getWorkers().prettyhtml.run;
+    new ClipboardJS(".btn-copy", {
+      text: () => this.result
+    });
   },
   methods: {
     async prettify() {
