@@ -223,7 +223,7 @@ export default {
   data() {
     return {
       prettifier: null,
-      prettyHtmlVersion: "0.2.0",
+      prettyHtmlVersion: "0.2.1",
       linenumbers: true,
       opts: { ...defaultOpts },
       result: "",

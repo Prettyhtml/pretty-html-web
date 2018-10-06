@@ -751,13 +751,13 @@
     "@starptech/webparser" "^0.2.0"
     property-information "^4.2.0"
 
-"@starptech/prettyhtml-formatter@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.2.0.tgz#bce30cde0ba47dc6314d4ce830aac3ff82f006e9"
-  integrity sha512-pOT4kSu6uOwaiMwueWYMlMg2MtGS4i9qMGSF1dZ2TiFnPD8CFvpS49WFAoHH4eehDBR+4ni1zILE8oJ3x+xMbw==
+"@starptech/prettyhtml-formatter@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.2.1.tgz#a30587fd5af04c4b0d43429bc777c69fffbfbd75"
+  integrity sha512-oOJx8CWw3KyNn8JkP0gmLx10izwWP9qs7SWVOd17r0wCSC1am/e6SMXmajVJdTjDnLD8q5iXmNiS0o2JHe7owg==
   dependencies:
     "@starptech/prettyhtml-hast-to-html" "^0.2.0"
-    "@starptech/rehype-minify-whitespace" "^0.2.0"
+    "@starptech/rehype-minify-whitespace" "^0.2.1"
     "@starptech/rehype-webparser" "^0.2.0"
     "@starptech/webparser" "^0.2.0"
     hast-util-is-element "^1.0.1"
@@ -801,12 +801,12 @@
     property-information "^4.2.0"
     space-separated-tokens "^1.1.2"
 
-"@starptech/prettyhtml@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.2.0.tgz#67a8b8fa736d058ff583477bbed605853fe94e98"
-  integrity sha512-TOCj77O/ytUxvq/yv8fmi4r80uz3auHxSZ+LjQv+w/Gm1/nnSwlGF0g/Wj9PiS7FrA2Nhhkibt0Bk3vbU6Fmpg==
+"@starptech/prettyhtml@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.2.1.tgz#a87f2283175e080e8f54a232f5f18eebf34746f5"
+  integrity sha512-Nt83LHpkF9MhY5vVLB8/Qo9KHedj8NhoEk5eqhtaJKZjo2giFKrbWiYzzM/NyjE6YziAlps+7w4RV+/SWeHVlw==
   dependencies:
-    "@starptech/prettyhtml-formatter" "^0.2.0"
+    "@starptech/prettyhtml-formatter" "^0.2.1"
     "@starptech/rehype-webparser" "^0.2.0"
     "@starptech/webparser" "^0.2.0"
     meow "^5.0.0"
@@ -818,10 +818,10 @@
     vfile "^3.0.0"
     vfile-reporter "^5.0.0"
 
-"@starptech/rehype-minify-whitespace@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@starptech/rehype-minify-whitespace/-/rehype-minify-whitespace-0.2.0.tgz#c50f1f96b88da00dd7fb35787806a1bd39ae0f8a"
-  integrity sha512-lDBhcsVfD//esxWuB8n0hCWhMxfovpm+JfkqypAAG0QeFulUW7CmSctO3vkZs4T67yiletJSBfemi4ygtHBs2A==
+"@starptech/rehype-minify-whitespace@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@starptech/rehype-minify-whitespace/-/rehype-minify-whitespace-0.2.1.tgz#82806038603ece7bdedef3e615cc97d607c727e5"
+  integrity sha512-VWhUU/KtRgSp6w0kcUHG491vvbhto1JhsWvqn5uZuwBg1OrG2x8lo6hmg9A81xHyYmwihb1/NXTXO3LhsVUDbA==
   dependencies:
     collapse-white-space "^1.0.4"
     hast-util-embedded "^1.0.1"
@@ -7791,7 +7791,7 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-"scss-parser@github:qodesmith/scss-parser":
+scss-parser@qodesmith/scss-parser:
   version "1.0.0"
   resolved "https://codeload.github.com/qodesmith/scss-parser/tar.gz/6fc86ce46b722b16639712ba8ed90706fa2871dc"
   dependencies:
