@@ -1,3 +1,7 @@
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
 .my-editor {
   background-color: #fafafa;
 }

@@ -4,6 +4,7 @@ const whitelister = require("purgecss-whitelister");
 const prismcss = whitelister("./src/assets/styles.css");
 module.exports = {
   plugins: [
+    require("tailwindcss")("./tailwind.js"),
     process.env.NODE_ENV === "production" &&
       purgecss({
         content: ["./src/**/*.vue"],
