@@ -5,10 +5,17 @@
     @click="toggle"
     :style="styleObj"
   >
-    <span :class="underlayClasses" class="bg-grey rounded-full toggle-input w-8 h-2"></span>
-    <span :class="thumbClasses" class="absolute rounded-full w-4 h-4 bg-black focus:bg-grey"></span>
+    <span
+      :class="underlayClasses"
+      class="bg-grey rounded-full toggle-input w-8 h-2"
+    ></span>
+    <span
+      :class="thumbClasses"
+      class="absolute rounded-full w-4 h-4 bg-black focus:bg-grey"
+    ></span>
   </div>
 </template>
+
 <script>
 export default {
   props: {

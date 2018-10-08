@@ -14,9 +14,7 @@
       </h1>
       <div class="settings px-4 text-grey-darkest">
         <div class="section">
-          <p
-            class="text-sm text-center"
-          >The formatter for the modern web</p>
+          <p class="text-sm text-center">The formatter for the modern web</p>
           <h3
             class="section-name mt-8 font-medium tracking-wide text-xxs text-grey-dark uppercase"
           >Editor</h3>
@@ -32,9 +30,7 @@
             </div>
           </div>
           <div class="section-item flex items-center mt-1">
-            <div class="setting-label w-24 text-sm">
-              Line Numbers
-            </div>
+            <div class="setting-label w-24 text-sm">Line Numbers</div>
             <AppToggle v-model="linenumbers" class="ml-4"></AppToggle>
           </div>
         </div>
@@ -52,8 +48,13 @@
               >
             </div>
           </div>
-          <div class="section-item flex items-center mt-2" :class="{'opacity-50': opts.useTabs}">
-            <div class="setting-label w-24 text-sm">{{ opts.useTabs ? 'Tab' : 'Space'}} width</div>
+          <div
+            class="section-item flex items-center mt-2"
+            :class="{'opacity-50': opts.useTabs}"
+          >
+            <div
+              class="setting-label w-24 text-sm"
+            >{{ opts.useTabs ? 'Tab' : 'Space'}} width</div>
             <div class="setting-input w-16 ml-4">
               <input
                 v-model.number="opts.tabWidth"
@@ -64,9 +65,7 @@
             </div>
           </div>
           <div class="section-item flex items-center mt-1">
-            <div class="setting-label w-24 text-sm">
-              Use Tabs
-            </div>
+            <div class="setting-label w-24 text-sm">Use Tabs</div>
             <AppToggle v-model="opts.useTabs" class="ml-4"></AppToggle>
           </div>
           <div class="section-item flex items-center">
@@ -117,7 +116,9 @@
     <div class="content bg-white flex flex-1 flex-col overflow-hidden">
       <header class="header border-b-2 flex items-center justify-between p-4">
         <span class="text-sm flex items-center">
-          <span class="text-xs text-grey-dark font-medium uppercase p-2">Examples</span>
+          <span
+            class="text-xs text-grey-dark font-medium uppercase p-2"
+          >Examples</span>
           <button
             @click="example('html')"
             class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
@@ -135,7 +136,6 @@
             class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
           >SVELTE</button>
         </span>
-
         <button
           @click="prettify"
           class="ml-2 bg-grey-lighter text-grey-darker uppercase hover:bg-grey-darker hover:text-white font-bold text-sm py-2 px-6 rounded-full inline-flex items-center tracking-wide focus:outline-none focus:shadow-outline"
@@ -162,13 +162,27 @@
           class="editor flex-no-shrink flex-1 flex flex-col overflow-hidden pt-4"
         >
           <header class="flex relative">
-            <h3 class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase">Source</h3>
+            <h3
+              class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase"
+            >Source</h3>
             <button
               @click="clear"
               class="absolute text-grey-dark flex items-center pin-r pin-t -mt-2 mr-2 p-1 font-normal hover:text-grey-darkest rounded mx-1 focus:outline-none focus:shadow-outline"
               title="clear text"
             >
-            <svg class="w-4 h-4 mt-px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <svg
+                class="w-4 h-4 mt-px"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
             </button>
           </header>
           <prism-editor
@@ -183,12 +197,30 @@
           class="output border-l-2 flex-no-shrink flex-1 flex flex-col overflow-hidden pt-4"
         >
           <header class="flex relative">
-            <h3 class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase">Output</h3>
+            <h3
+              class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase"
+            >Output</h3>
             <button
               class="btn-copy absolute text-grey-dark flex items-center pin-r pin-t -mt-2 mr-2 p-1 font-normal uppercase text-xs hover:text-grey-darkest rounded mx-1 focus:outline-none focus:shadow-outline group"
             >
-            <span class="opacity-0 font-semibold mr-2 text-grey-dark group-hover:opacity-100">Copy to clipboard</span>
-            <svg class="w-5 h-5 mt-px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              <span
+                class="opacity-0 font-semibold mr-2 text-grey-dark group-hover:opacity-100"
+              >Copy to clipboard</span>
+              <svg
+                class="w-5 h-5 mt-px"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                ></path>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+              </svg>
             </button>
           </header>
           <prism-editor
@@ -231,7 +263,7 @@ export default {
   data() {
     return {
       prettifier: null,
-      prettyHtmlVersion: "0.2.1",
+      prettyHtmlVersion: "0.2.2",
       linenumbers: true,
       opts: { ...defaultOpts },
       result: "",
