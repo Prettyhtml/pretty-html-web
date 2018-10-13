@@ -157,7 +157,7 @@
           <span class="">Run</span>
         </button>
       </header>
-      <main class="section--main flex-1 flex">
+      <main class="section--main flex-1 flex min-h-0">
         <div
           class="editor flex-no-shrink flex-1 flex flex-col overflow-hidden pt-4"
         >
