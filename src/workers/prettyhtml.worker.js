@@ -2,6 +2,6 @@
 importScripts("prettyhtml.browserified.min.js");
 
 export function run(code, opts) {
-  const result = prettyhtml(code, opts);
-  return result;
+  const vFile = prettyhtml(code, opts);
+  return vFile.contents;
 }
