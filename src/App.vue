@@ -294,6 +294,7 @@ export default {
   methods: {
     async prettify() {
       try {
+        this.debugMsg = "";
         this.result = await this.prettifier(this.code, this.opts);
       } catch (err) {
         const workerMsg = err.message;
