@@ -751,14 +751,14 @@
     "@starptech/webparser" "^0.3.0"
     property-information "https://github.com/StarpTech/property-information#attr_normalization_fix"
 
-"@starptech/prettyhtml-formatter@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.3.2.tgz#15a80772316e8338017e6237378ac99d0ec3fc04"
-  integrity sha512-vUc55sibrvn1ILbZM7bYNZ5Z4lqfkQVDyxCFrOLRMMNop4Ezk2/Ez7sI8L00OFrupLDxbb08bAklG5/JPv2vMg==
+"@starptech/prettyhtml-formatter@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.3.3.tgz#da1fd49014b8cf18bc6a7127578fe236fb716908"
+  integrity sha512-ybdsWSb4F5/DWmmZLqLafUmN2tcEkq5jc7hOAfRFY6w0Hox6BTdfEPIqIDtO/XUr4moEdIwHXcV0etjeefF6oA==
   dependencies:
     "@starptech/prettyhtml-hast-to-html" "^0.3.2"
     "@starptech/rehype-minify-whitespace" "^0.3.2"
-    "@starptech/rehype-webparser" "^0.3.2"
+    "@starptech/rehype-webparser" "^0.3.3"
     "@starptech/webparser" "^0.3.0"
     hast-util-is-element "^1.0.1"
     hast-util-to-string "^1.0.1"
@@ -801,13 +801,13 @@
     property-information "https://github.com/StarpTech/property-information#attr_normalization_fix"
     space-separated-tokens "^1.1.2"
 
-"@starptech/prettyhtml@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.3.2.tgz#2720d404cdceb8c187c7b636c2509cbcbf747693"
-  integrity sha512-CM+Y67COxbH/PWhTFqYiqVZA3SzVQQrf8UMzKU8PVM7MQhes+6qFHTnQba3HBnpRxLTGOzE7UEP1ivIpV2cBAQ==
+"@starptech/prettyhtml@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.3.3.tgz#d239ad223da838aa90ef1f0e876888715a9cf87c"
+  integrity sha512-2QuczoNQF5cg2l7Fc/0Mpoub9WUHCCXAGtmaaoCT9dKsVG4jJ94yv3N1+W+0BNa3iXAViyb3JkXXT63O5+OOmA==
   dependencies:
-    "@starptech/prettyhtml-formatter" "^0.3.2"
-    "@starptech/rehype-webparser" "^0.3.2"
+    "@starptech/prettyhtml-formatter" "^0.3.3"
+    "@starptech/rehype-webparser" "^0.3.3"
     "@starptech/webparser" "^0.3.0"
     meow "^5.0.0"
     prettier "^1.14.3"
@@ -832,10 +832,10 @@
     unist-util-is "^2.1.2"
     unist-util-modify-children "^1.1.2"
 
-"@starptech/rehype-webparser@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@starptech/rehype-webparser/-/rehype-webparser-0.3.2.tgz#9d9c654b4a6977bf25fbc14d79923d96d10d811f"
-  integrity sha512-7WUfawuEEv/hXqEFWDbduc4Q1vzy6Ap77axmTUK1cRrWh2IAdJQEBmkWqkny9aEIOshj56x0I7xF4Cdi6qePLQ==
+"@starptech/rehype-webparser@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@starptech/rehype-webparser/-/rehype-webparser-0.3.3.tgz#8c8554a90290424591bb8cfcfc3078a92322cd5a"
+  integrity sha512-SCQVPW98jD1Stn6KmPH2wp61mEw+vUYS8pgJCvvPZqEZdQI6LfsmzMljr7Yt5wMtsipL8pudzzzyvrV8S+KnIA==
   dependencies:
     "@starptech/hast-util-from-webparser" "^0.3.2"
     "@starptech/webparser" "^0.3.0"
