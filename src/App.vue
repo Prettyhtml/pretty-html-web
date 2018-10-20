@@ -231,6 +231,20 @@
             readonly
             :line-numbers="linenumbers"
           />
+          <header class="flex relative" v-show="debugMsg">
+            <h3
+              class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase"
+            >Debug</h3>
+          </header>
+          <prism-editor
+            v-show="debugMsg"
+            class="my-editor debug-editor mt-4 px-2 focus:outline-none"
+            :code="debugMsg"
+            language="html"
+            :style="{'tab-size': opts.tabWidth}"
+            :readonly="true"
+            :line-numbers="false"
+          />
         </div>
       </main>
     </div>
@@ -263,9 +277,10 @@ export default {
   data() {
     return {
       prettifier: null,
-      prettyHtmlVersion: "0.3.0",
+      prettyHtmlVersion: "0.3.1",
       linenumbers: true,
       opts: { ...defaultOpts },
+      debugMsg: "",
       result: "",
       code: ""
     };
@@ -278,12 +293,21 @@ export default {
   },
   methods: {
     async prettify() {
-      this.result = await this.prettifier(this.code, this.opts);
+      try {
+        this.result = await this.prettifier(this.code, this.opts);
+      } catch (err) {
+        const workerMsg = err.message;
+        this.debugMsg = `❌  ${workerMsg.name} - ${workerMsg.ruleId ||
+          "Error"}: ${workerMsg.message}`;
+        // eslint-disable-next-line
+        console.error(`❌  ${workerMsg.ruleId || "Error"}:`, workerMsg);
+      }
     },
     resetToDefaults() {
       this.opts = { ...defaultOpts };
     },
     clear() {
+      this.debugMsg = "";
       this.code = "";
       this.result = "";
     },
@@ -291,6 +315,7 @@ export default {
       this.code = code;
     },
     example(lang) {
+      this.clear();
       this.code = Examples[lang];
       this.prettify();
     }
@@ -308,6 +333,9 @@ export default {
 }
 .sidebar {
   width: 17.5rem;
+}
+.debug-editor {
+  height: 150px;
 }
 select {
   -webkit-appearance: none;
