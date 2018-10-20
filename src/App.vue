@@ -277,7 +277,9 @@ export default {
   data() {
     return {
       prettifier: null,
-      prettyHtmlVersion: "0.3.1",
+      prettyHtmlVersion: preval`
+        module.exports = require('../package.json').devDependencies['@starptech/prettyhtml'].substr(1);
+      `,
       linenumbers: true,
       opts: { ...defaultOpts },
       debugMsg: "",
