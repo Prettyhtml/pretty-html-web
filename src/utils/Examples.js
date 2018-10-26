@@ -25,6 +25,7 @@ export default {
       <div class="header">
     <button @click="prettify">Prettify</button>
   </div>
+  <textarea wrap/>
       <div style="display:flex">
     <prism-editor class="my-editor" :code="code" @change="changeCode" language="html" />
 <prism-editor :code="result" language="html" />
