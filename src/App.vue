@@ -122,7 +122,7 @@
           <button
             @click="example('html')"
             class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
-          >HTML</button>
+          >HTML5</button>
           <button
             @click="example('vue')"
             class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
