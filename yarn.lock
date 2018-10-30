@@ -751,12 +751,12 @@
     "@starptech/webparser" "^0.5.0"
     property-information "https://github.com/StarpTech/property-information#attr_normalization_fix"
 
-"@starptech/prettyhtml-formatter@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.5.0.tgz#c08ec57fb0eedba2b8ea3d77222ea8940be0ca45"
-  integrity sha512-fys2hvhIBCipCAKeZwge2hHMpXQ/2ZYSXQsoiViRIEB2dgSJYir5sDo/HZOHzwKRaeszoeMV72Ud9SXjwnZP2w==
+"@starptech/prettyhtml-formatter@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.5.1.tgz#c5fe4f4b0519b29616de69dda32e4054878345fb"
+  integrity sha512-Z0tH4p3ZASUx7izAjr8UHe3+6PngDreDdpaoK/9OSJAyl1OtA7fYsiqlWxqeTLN9AAYYXAJda1PCq1e4zQ5zKw==
   dependencies:
-    "@starptech/prettyhtml-hast-to-html" "^0.5.0"
+    "@starptech/prettyhtml-hast-to-html" "^0.5.1"
     "@starptech/rehype-minify-whitespace" "^0.5.0"
     "@starptech/rehype-webparser" "^0.5.0"
     "@starptech/webparser" "^0.5.0"
@@ -774,10 +774,10 @@
     unist-util-visit-parents "^2.0.1"
     xtend "^4.0.1"
 
-"@starptech/prettyhtml-hast-to-html@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hast-to-html/-/prettyhtml-hast-to-html-0.5.0.tgz#c04110280782cc67ab24e3f3c046899167a64cdb"
-  integrity sha512-f70cHfYwd8a6qG9OLRe9cIpne31/GNYPitVErJe4mvCX7heChaN2XR9ZzXBgYepG2uGc5VLh7IdFfsBBwJNj7w==
+"@starptech/prettyhtml-hast-to-html@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hast-to-html/-/prettyhtml-hast-to-html-0.5.1.tgz#f60c46170a44cce9734776037ef1446c404da4c0"
+  integrity sha512-9nyOT8Be5RayBvMg38jCfogbIa9sW+bbc5akIMNfaPmxKfqbCsy6+NZHZa9PIWG1UsKPElEk++jLby+zX5Rz3A==
   dependencies:
     ccount "^1.0.3"
     comma-separated-tokens "^1.0.5"
@@ -801,12 +801,12 @@
     property-information "https://github.com/StarpTech/property-information#attr_normalization_fix"
     space-separated-tokens "^1.1.2"
 
-"@starptech/prettyhtml@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.5.0.tgz#0810b515bdb2400039137a58db9a9818fb74823c"
-  integrity sha512-+YhABGmfR35cP9XXTtPrjU2sEj8mcu/QzCP9pCT76F+BSoE3/1qlvnTjG4dsKI1clShfcpoO5fN826K4KnMD/g==
+"@starptech/prettyhtml@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.5.1.tgz#24c8a6e3520c50b380d589cc548884c47908373c"
+  integrity sha512-DgGHjCH822XXRE6KT8WNoRAJLD6PP6UBfN7aeme3S2xVDitu7fJeHhJeVPVi2B8QGF2t+hEPG/uK0/yUHqt4bw==
   dependencies:
-    "@starptech/prettyhtml-formatter" "^0.5.0"
+    "@starptech/prettyhtml-formatter" "^0.5.1"
     "@starptech/rehype-webparser" "^0.5.0"
     "@starptech/webparser" "^0.5.0"
     meow "^5.0.0"
@@ -7134,6 +7134,12 @@ promise-inflight@^1.0.1:
 "property-information@git+https://github.com/StarpTech/property-information.git#attr_normalization_fix":
   version "4.2.0"
   resolved "git+https://github.com/StarpTech/property-information.git#e29762a02f9cf1d000da6c1cdb479800c60aa2c2"
+  dependencies:
+    xtend "^4.0.1"
+
+"property-information@https://github.com/StarpTech/property-information#attr_normalization_fix":
+  version "4.2.0"
+  resolved "https://github.com/StarpTech/property-information#e29762a02f9cf1d000da6c1cdb479800c60aa2c2"
   dependencies:
     xtend "^4.0.1"
 
