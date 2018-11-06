@@ -742,24 +742,24 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.2.tgz#54c5a964462be3d4d78af631363c18d6fa91ac26"
   integrity sha512-yprFYuno9FtNsSHVlSWd+nRlmGoAbqbeCwOryP6sC/zoCjhpArcRMYp19EvpSUSizJAlsXEwJv+wcWS9XaXdMw==
 
-"@starptech/hast-util-from-webparser@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@starptech/hast-util-from-webparser/-/hast-util-from-webparser-0.5.0.tgz#082d33e3041ef470e1f5af99a2c7b459f7563a2a"
-  integrity sha512-JYtDnRHqDRH2KHmJjcFY+o6ytDh7JT24hXhY5dS5x7oHB4dALQgBFZ82jEch6xsenA3/BfHqLmOTCce0pOjgpg==
+"@starptech/hast-util-from-webparser@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@starptech/hast-util-from-webparser/-/hast-util-from-webparser-0.5.2.tgz#dd24cd982e3d74a8bb3abd3b2237737db0890e6b"
+  integrity sha512-3gaQgRx7jQgEv+tGdnjNYAydBI95cU9pt5SZGU0eHQYvSxBeEwQMVQ9fj5H/X91k4POQQV9GzCb2SjiBuFjTOw==
   dependencies:
-    "@starptech/prettyhtml-hastscript" "^0.5.0"
-    "@starptech/webparser" "^0.5.0"
+    "@starptech/prettyhtml-hastscript" "^0.5.2"
+    "@starptech/webparser" "^0.5.2"
     property-information "https://github.com/StarpTech/property-information#attr_normalization_fix"
 
-"@starptech/prettyhtml-formatter@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.5.1.tgz#c5fe4f4b0519b29616de69dda32e4054878345fb"
-  integrity sha512-Z0tH4p3ZASUx7izAjr8UHe3+6PngDreDdpaoK/9OSJAyl1OtA7fYsiqlWxqeTLN9AAYYXAJda1PCq1e4zQ5zKw==
+"@starptech/prettyhtml-formatter@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.5.2.tgz#2b99a765ef8a5960b5a38c0745ec862f3433a663"
+  integrity sha512-+B/CBsK0FRbc6pITyKYQ0MSJGBPrTVmGEoeHdepE6RAmf/1PYl7S0Ci/pbv2u1bN5SzRQnGEjzvM4MbRaBwnYA==
   dependencies:
-    "@starptech/prettyhtml-hast-to-html" "^0.5.1"
-    "@starptech/rehype-minify-whitespace" "^0.5.0"
-    "@starptech/rehype-webparser" "^0.5.0"
-    "@starptech/webparser" "^0.5.0"
+    "@starptech/prettyhtml-hast-to-html" "^0.5.2"
+    "@starptech/rehype-minify-whitespace" "^0.5.2"
+    "@starptech/rehype-webparser" "^0.5.2"
+    "@starptech/webparser" "^0.5.2"
     hast-util-is-element "^1.0.1"
     hast-util-to-string "^1.0.1"
     html-void-elements "^1.0.3"
@@ -774,10 +774,10 @@
     unist-util-visit-parents "^2.0.1"
     xtend "^4.0.1"
 
-"@starptech/prettyhtml-hast-to-html@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hast-to-html/-/prettyhtml-hast-to-html-0.5.1.tgz#f60c46170a44cce9734776037ef1446c404da4c0"
-  integrity sha512-9nyOT8Be5RayBvMg38jCfogbIa9sW+bbc5akIMNfaPmxKfqbCsy6+NZHZa9PIWG1UsKPElEk++jLby+zX5Rz3A==
+"@starptech/prettyhtml-hast-to-html@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hast-to-html/-/prettyhtml-hast-to-html-0.5.2.tgz#e106a49bcc8961cd089ce4fe3c612f2fd483cc3e"
+  integrity sha512-miG+AQJJLJzlpySJcUl27+WeXqbpyzpwXkZA3CoXnmC+fCUUu2hUw7UIcL2XotJyZNtEfgzbQVQ/qUHh/ayy6Q==
   dependencies:
     ccount "^1.0.3"
     comma-separated-tokens "^1.0.5"
@@ -791,24 +791,24 @@
     unist-util-is "^2.1.2"
     xtend "^4.0.1"
 
-"@starptech/prettyhtml-hastscript@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hastscript/-/prettyhtml-hastscript-0.5.0.tgz#f3643772856608ecf2bdfaedfb51a4277be37ffe"
-  integrity sha512-GK7+ebnNarw9g6hGcyp1zO5CG5DFjfdF/OnUJqg17r5sSbBcKqoK7F+ytsQADuobonfs/2msqkfxtTKVmyRTYg==
+"@starptech/prettyhtml-hastscript@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hastscript/-/prettyhtml-hastscript-0.5.2.tgz#66eee310ab9f5643f9d775ee502a867b9b605cf5"
+  integrity sha512-+oN11tUV5r1SHtDK+TrXOT3SDJnuopAtFU8cS0spxwohtFCEYbxZSWfGewWT4y9wwF9uLOI6E3Z23pGY+irrqQ==
   dependencies:
     comma-separated-tokens "^1.0.5"
     hast-util-parse-selector "^2.2.0"
     property-information "https://github.com/StarpTech/property-information#attr_normalization_fix"
     space-separated-tokens "^1.1.2"
 
-"@starptech/prettyhtml@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.5.1.tgz#24c8a6e3520c50b380d589cc548884c47908373c"
-  integrity sha512-DgGHjCH822XXRE6KT8WNoRAJLD6PP6UBfN7aeme3S2xVDitu7fJeHhJeVPVi2B8QGF2t+hEPG/uK0/yUHqt4bw==
+"@starptech/prettyhtml@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.5.2.tgz#5ed293575a483f5414da7a76210971758ac2f436"
+  integrity sha512-g/r+2fzNOYEB5UGa4LcNtx8Eta/QxfJ+4lWVxC2TTwT01wBrWkCzBslJnbb1/c6TuPVdxuc4r54mtlaZWaFkxg==
   dependencies:
-    "@starptech/prettyhtml-formatter" "^0.5.1"
-    "@starptech/rehype-webparser" "^0.5.0"
-    "@starptech/webparser" "^0.5.0"
+    "@starptech/prettyhtml-formatter" "^0.5.2"
+    "@starptech/rehype-webparser" "^0.5.2"
+    "@starptech/webparser" "^0.5.2"
     meow "^5.0.0"
     prettier "^1.14.3"
     rehype-sort-attribute-values "^1.0.1"
@@ -818,10 +818,10 @@
     vfile "^3.0.0"
     vfile-reporter "^5.0.0"
 
-"@starptech/rehype-minify-whitespace@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@starptech/rehype-minify-whitespace/-/rehype-minify-whitespace-0.5.0.tgz#94cc720d265ea4cacfe7f867c62e861b77cd2390"
-  integrity sha512-de1WcqOU2bVQu5pZ29zT2JTOmAD7iBkyBnXy3gb2AdWobrUQZ9cqK8eSlfdeDWgwGFaEzUgDuMJNjRRcVYT+EQ==
+"@starptech/rehype-minify-whitespace@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@starptech/rehype-minify-whitespace/-/rehype-minify-whitespace-0.5.2.tgz#89cc78afd7d6201aa99b0688800d48181cbd5bf8"
+  integrity sha512-GgkRunyzt9L9AQ67Imb7mqxvopFYhCJlKmZsLviaeqCRl2iT6jCK4vcmoDFRYz3f05QG2JEQSXWl6hzWfHkkTA==
   dependencies:
     collapse-white-space "^1.0.4"
     hast-util-embedded "^1.0.1"
@@ -832,18 +832,18 @@
     unist-util-is "^2.1.2"
     unist-util-modify-children "^1.1.2"
 
-"@starptech/rehype-webparser@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@starptech/rehype-webparser/-/rehype-webparser-0.5.0.tgz#bf4e6290afc3b10e1cc2ae68565394fb28fd1d32"
-  integrity sha512-6SvxQt6Z8Qz2rrtYyIxkemxUEVlNc/WXrN39olzyJQEhSRkW75LWGbvp0EmJNBLyv10j9jbzbtRbg9llhjskBg==
+"@starptech/rehype-webparser@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@starptech/rehype-webparser/-/rehype-webparser-0.5.2.tgz#3136c622ba86f0016ff2e5bfa7285644aea21727"
+  integrity sha512-NL84WSMPiM2dRq+NT1gJrbXq6DaIOoRk8Y4U3m9TjwlpgxVvG/r0ne06Z7SuBCdtZ93Npquw2Xof9kfL5Md4Mw==
   dependencies:
-    "@starptech/hast-util-from-webparser" "^0.5.0"
-    "@starptech/webparser" "^0.5.0"
+    "@starptech/hast-util-from-webparser" "^0.5.2"
+    "@starptech/webparser" "^0.5.2"
 
-"@starptech/webparser@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@starptech/webparser/-/webparser-0.5.0.tgz#b50c35dab9934b5728246d7fec7e684208d4e7c9"
-  integrity sha512-6ZyFMO/qRDsqvr1KAHvzHUsUDKrElwP4++cQyFn7nNUV+eW0sjFKzq9TokVIje8q03oKjGz/+5CITRyYvaY/1g==
+"@starptech/webparser@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@starptech/webparser/-/webparser-0.5.2.tgz#ca93f5341c2602f4994103278857e75342a8acae"
+  integrity sha512-oTNPtKTvWcgrMFu5kRpdtGu45Rnp9G4xzaVz0XsO9bGwQk7yAxewMZ00k27I2h84JTJ9PFINt7LHHZgwUO1eMQ==
 
 "@vue/babel-preset-app@^3.0.4":
   version "3.0.4"
@@ -7134,12 +7134,6 @@ promise-inflight@^1.0.1:
 "property-information@git+https://github.com/StarpTech/property-information.git#attr_normalization_fix":
   version "4.2.0"
   resolved "git+https://github.com/StarpTech/property-information.git#e29762a02f9cf1d000da6c1cdb479800c60aa2c2"
-  dependencies:
-    xtend "^4.0.1"
-
-"property-information@https://github.com/StarpTech/property-information#attr_normalization_fix":
-  version "4.2.0"
-  resolved "https://github.com/StarpTech/property-information#e29762a02f9cf1d000da6c1cdb479800c60aa2c2"
   dependencies:
     xtend "^4.0.1"
 
