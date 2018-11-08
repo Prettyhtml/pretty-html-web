@@ -19,7 +19,7 @@
             class="section-name mt-8 font-medium tracking-wide text-xxs text-grey-dark uppercase"
           >Editor</h3>
           <div class="section-item flex items-center mt-4">
-            <div class="setting-label w-24 text-sm">Source type</div>
+            <div class="setting-label w-32 text-sm">Source type</div>
             <div class="setting-input flex-1 ml-4">
               <select
                 class="bg-grey-lighter text-grey-darker border font-medium w-full text-sm py-1 pl-2 rounded focus:outline-none focus:shadow-outline"
@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="section-item flex items-center mt-1">
-            <div class="setting-label w-24 text-sm">Line Numbers</div>
+            <div class="setting-label w-32 text-sm">Line Numbers</div>
             <AppToggle v-model="linenumbers" class="ml-4"></AppToggle>
           </div>
         </div>
@@ -39,7 +39,7 @@
             class="section-name font-medium tracking-wide text-xxs text-grey-dark uppercase"
           >Settings</h3>
           <div class="section-item flex items-center mt-4">
-            <div class="setting-label w-24 text-sm">Print width</div>
+            <div class="setting-label w-32 text-sm">Print width</div>
             <div class="setting-input w-16 ml-4">
               <input
                 v-model.number="opts.printWidth"
@@ -53,7 +53,7 @@
             :class="{'opacity-50': opts.useTabs}"
           >
             <div
-              class="setting-label w-24 text-sm"
+              class="setting-label w-32 text-sm"
             >{{ opts.useTabs ? 'Tab' : 'Space'}} width</div>
             <div class="setting-input w-16 ml-4">
               <input
@@ -65,15 +65,19 @@
             </div>
           </div>
           <div class="section-item flex items-center mt-1">
-            <div class="setting-label w-24 text-sm">Use Tabs</div>
+            <div class="setting-label w-32 text-sm">Use Tabs</div>
             <AppToggle v-model="opts.useTabs" class="ml-4"></AppToggle>
           </div>
           <div class="section-item flex items-center">
-            <div class="setting-label w-24 text-sm">Single Quote</div>
+            <div class="setting-label w-32 text-sm">Single Quote</div>
             <AppToggle v-model="opts.singleQuote" class="ml-4"></AppToggle>
           </div>
           <div class="section-item flex items-center">
-            <div class="setting-label w-24 text-sm text-grey">Use Prettier</div>
+            <div class="setting-label w-32 text-sm text-grey">Wrap Attributes</div>
+            <AppToggle v-model="opts.wrapAttributes" class="ml-4"></AppToggle>
+          </div>
+          <div class="section-item flex items-center">
+            <div class="setting-label w-32 text-sm text-grey">Use Prettier</div>
             <AppToggle v-model="opts.usePrettier" class="ml-4" disabled></AppToggle>
           </div>
         </div>
@@ -266,7 +270,8 @@ const defaultOpts = {
   useTabs: false, // use tabs instead spaces for indentation (default: false)
   printWidth: 80, // use different maximum line length (default: 80)
   usePrettier: false, // use prettier for embedded content (default: true)
-  singleQuote: false // use single quote instead double quotes (default: `"`)
+  singleQuote: false, // use single quote instead double quotes (default: `"`)
+  wrapAttributes: false // force to wrap attributes (when it has multiple)
 };
 export default {
   name: "app",
