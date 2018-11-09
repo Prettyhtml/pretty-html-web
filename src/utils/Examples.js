@@ -41,5 +41,5 @@ export default {
     <Cat cat='{{ cat }}'></Cat>
   {{/each}}
   </ul>
-<p>Count: {{count}}</p>`
+<p>Count: {{count}}</p>`,
 };

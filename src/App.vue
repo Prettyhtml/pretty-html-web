@@ -9,7 +9,7 @@
             src="./assets/logo.png"
             class="-mt-6 -mb-4 -ml-4"
             alt="PrettyHtml"
-          >
+          />
         </a>
       </h1>
       <div class="settings px-4 text-grey-darkest">
@@ -17,7 +17,9 @@
           <p class="text-sm text-center">The formatter for the modern web</p>
           <h3
             class="section-name mt-8 font-medium tracking-wide text-xxs text-grey-dark uppercase"
-          >Editor</h3>
+          >
+            Editor
+          </h3>
           <div class="section-item flex items-center mt-4">
             <div class="setting-label w-32 text-sm">Source type</div>
             <div class="setting-input flex-1 ml-4">
@@ -37,7 +39,9 @@
         <div class="section mt-8">
           <h3
             class="section-name font-medium tracking-wide text-xxs text-grey-dark uppercase"
-          >Settings</h3>
+          >
+            Settings
+          </h3>
           <div class="section-item flex items-center mt-4">
             <div class="setting-label w-32 text-sm">Print width</div>
             <div class="setting-input w-16 ml-4">
@@ -45,23 +49,24 @@
                 v-model.number="opts.printWidth"
                 class="bg-grey-lighter text-grey-darkest border font-medium w-full text-sm py-1 px-2 rounded focus:outline-none focus:shadow-outline"
                 type="number"
-              >
+              />
             </div>
           </div>
           <div
             class="section-item flex items-center mt-2"
-            :class="{'opacity-50': opts.useTabs}"
+            :class="{ 'opacity-50': opts.useTabs }"
           >
-            <div
-              class="setting-label w-32 text-sm"
-            >{{ opts.useTabs ? 'Tab' : 'Space'}} width</div>
+            <div class="setting-label w-32 text-sm">
+              {{ opts.useTabs ? "Tab" : "Space" }}
+              width
+            </div>
             <div class="setting-input w-16 ml-4">
               <input
                 v-model.number="opts.tabWidth"
                 class="bg-grey-lighter text-grey-darkest border font-medium w-full text-sm py-1 px-2 rounded focus:outline-none focus:shadow-outline"
                 :disabled="opts.useTabs"
                 type="number"
-              >
+              />
             </div>
           </div>
           <div class="section-item flex items-center mt-1">
@@ -73,24 +78,34 @@
             <AppToggle v-model="opts.singleQuote" class="ml-4"></AppToggle>
           </div>
           <div class="section-item flex items-center">
-            <div class="setting-label w-32 text-sm text-grey">Wrap Attributes</div>
+            <div class="setting-label w-32 text-sm text-grey">
+              Wrap Attributes
+            </div>
             <AppToggle v-model="opts.wrapAttributes" class="ml-4"></AppToggle>
           </div>
           <div class="section-item flex items-center">
             <div class="setting-label w-32 text-sm text-grey">Use Prettier</div>
-            <AppToggle v-model="opts.usePrettier" class="ml-4" disabled></AppToggle>
+            <AppToggle
+              v-model="opts.usePrettier"
+              class="ml-4"
+              disabled
+            ></AppToggle>
           </div>
         </div>
         <button
           @click="resetToDefaults"
           class="mt-6 text-xs text-grey-dark hover:text-grey-darkest"
-        >Reset to defaults</button>
+        >
+          Reset to defaults
+        </button>
       </div>
       <div class="about mt-auto pt-8 text-grey-dark">
         <div class="section px-4 my-4">
           <div class="flex justify-between">
             <h3 class="section-name font-medium text-xxs uppercase">About</h3>
-            <span class="font-medium text-xxs text-grey">{{ prettyHtmlVersion }}</span>
+            <span class="font-medium text-xxs text-grey">
+              {{ prettyHtmlVersion }}
+            </span>
           </div>
           <div class="section-item leading-normal flex items-center mt-4">
             <p class="text-sm font-normal">
@@ -99,19 +114,27 @@
                 href="https://github.com/prettyhtml/prettyhtml"
                 class="no-underline font-bold text-grey-dark"
                 target="_blank"
-              >Prettyhtml</a>
-              <br>Source code on
+              >
+                Prettyhtml
+              </a>
+              <br />
+              Source code on
               <a
                 href="https://github.com/prettyhtml/pretty-html-web"
                 class="no-underline font-bold text-grey-dark"
                 target="_blank"
-              >GitHub</a>
-              <br>Built w/ Vue &middot; by
+              >
+                GitHub
+              </a>
+              <br />
+              Built w/ Vue &middot; by
               <a
                 href="https://www.mesutkoca.com"
                 class="no-underline font-bold text-grey-dark"
                 target="_blank"
-              >Mesut Koca</a>
+              >
+                Mesut Koca
+              </a>
             </p>
           </div>
         </div>
@@ -120,25 +143,33 @@
     <div class="content bg-white flex flex-1 flex-col overflow-hidden">
       <header class="header border-b-2 flex items-center justify-between p-4">
         <span class="text-sm flex items-center">
-          <span
-            class="text-xs text-grey-dark font-medium uppercase p-2"
-          >Examples</span>
+          <span class="text-xs text-grey-dark font-medium uppercase p-2">
+            Examples
+          </span>
           <button
-            @click="example('html')"
+            @click="example('html');"
             class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
-          >HTML5</button>
+          >
+            HTML5
+          </button>
           <button
-            @click="example('vue')"
+            @click="example('vue');"
             class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
-          >VUE</button>
+          >
+            VUE
+          </button>
           <button
-            @click="example('angular')"
+            @click="example('angular');"
             class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
-          >ANGULAR</button>
+          >
+            ANGULAR
+          </button>
           <button
-            @click="example('svelte')"
+            @click="example('svelte');"
             class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
-          >SVELTE</button>
+          >
+            SVELTE
+          </button>
         </span>
         <button
           @click="prettify"
@@ -168,7 +199,9 @@
           <header class="flex relative">
             <h3
               class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase"
-            >Source</h3>
+            >
+              Source
+            </h3>
             <button
               @click="clear"
               class="absolute text-grey-dark flex items-center pin-r pin-t -mt-2 mr-2 p-1 font-normal hover:text-grey-darkest rounded mx-1 focus:outline-none focus:shadow-outline"
@@ -203,13 +236,17 @@
           <header class="flex relative">
             <h3
               class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase"
-            >Output</h3>
+            >
+              Output
+            </h3>
             <button
               class="btn-copy absolute text-grey-dark flex items-center pin-r pin-t -mt-2 mr-2 p-1 font-normal uppercase text-xs hover:text-grey-darkest rounded mx-1 focus:outline-none focus:shadow-outline group"
             >
               <span
                 class="opacity-0 font-semibold mr-2 text-grey-dark group-hover:opacity-100"
-              >Copy to clipboard</span>
+              >
+                Copy to clipboard
+              </span>
               <svg
                 class="w-5 h-5 mt-px"
                 xmlns="http://www.w3.org/2000/svg"
@@ -231,21 +268,23 @@
             class="my-editor mt-4 px-2 focus:outline-none"
             :code="result"
             language="html"
-            :style="{'tab-size': opts.tabWidth}"
+            :style="{ 'tab-size': opts.tabWidth }"
             readonly
             :line-numbers="linenumbers"
           />
           <header class="flex relative" v-show="debugMsg">
             <h3
               class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase"
-            >Debug</h3>
+            >
+              Debug
+            </h3>
           </header>
           <prism-editor
             v-show="debugMsg"
             class="my-editor debug-editor mt-4 px-2 focus:outline-none"
             :code="debugMsg"
             language="html"
-            :style="{'tab-size': opts.tabWidth}"
+            :style="{ 'tab-size': opts.tabWidth }"
             :readonly="true"
             :line-numbers="false"
           />
@@ -271,13 +310,13 @@ const defaultOpts = {
   printWidth: 80, // use different maximum line length (default: 80)
   usePrettier: false, // use prettier for embedded content (default: true)
   singleQuote: false, // use single quote instead double quotes (default: `"`)
-  wrapAttributes: false // force to wrap attributes (when it has multiple)
+  wrapAttributes: false, // force to wrap attributes (when it has multiple)
 };
 export default {
   name: "app",
   components: {
     AppToggle,
-    PrismEditor
+    PrismEditor,
   },
   data() {
     return {
@@ -289,13 +328,13 @@ export default {
       opts: { ...defaultOpts },
       debugMsg: "",
       result: "",
-      code: ""
+      code: "",
     };
   },
   async mounted() {
     this.prettifier = getWorkers().prettyhtml.run;
     new ClipboardJS(".btn-copy", {
-      text: () => this.result
+      text: () => this.result,
     });
   },
   methods: {
@@ -326,8 +365,8 @@ export default {
       this.clear();
       this.code = Examples[lang];
       this.prettify();
-    }
-  }
+    },
+  },
 };
 </script>
 

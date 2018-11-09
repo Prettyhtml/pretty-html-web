@@ -16,10 +16,10 @@ module.exports = {
                 return content.match(/[A-z0-9-:/]+/g) || [];
               }
             },
-            extensions: ["vue"]
-          }
-        ]
+            extensions: ["vue"],
+          },
+        ],
       }),
-    autoprefixer
-  ]
+    autoprefixer,
+  ],
 };

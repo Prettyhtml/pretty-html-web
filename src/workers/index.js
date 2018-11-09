@@ -9,7 +9,7 @@ export function getWorkers() {
     console.log("[pretty-html-worker]: Worker hasn't initialized yet.");
   }
   return {
-    prettyhtml: prettyhtmlWorker
+    prettyhtml: prettyhtmlWorker,
   };
 }
 

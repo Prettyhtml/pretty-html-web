@@ -64,7 +64,7 @@ if (process.env.NODE_ENV === "production") {
     ready() {
       console.log(
         "[SW] App is being served from cache by a service worker.\n" +
-          "For more details, visit https://goo.gl/AFskqB"
+          "For more details, visit https://goo.gl/AFskqB",
       );
     },
     cached() {
@@ -77,11 +77,11 @@ if (process.env.NODE_ENV === "production") {
     },
     offline() {
       console.log(
-        "[SW] No internet connection found. App is running in offline mode."
+        "[SW] No internet connection found. App is running in offline mode.",
       );
     },
     error(error) {
       console.error("[SW] Error during service worker registration:", error);
-    }
+    },
   });
 }

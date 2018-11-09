@@ -21,12 +21,12 @@ export default {
   props: {
     value: {
       type: Boolean,
-      default: false
+      default: false,
     },
     disabled: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
     styleObj() {
@@ -43,14 +43,14 @@ export default {
         ? "bg-purple border border-purple-dark pin-r"
         : "bg-white border border-grey pin-l";
       return [classes];
-    }
+    },
   },
   methods: {
     toggle() {
       if (this.disabled) return;
       this.$emit("input", !this.value);
-    }
-  }
+    },
+  },
 };
 </script>
 
