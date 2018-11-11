@@ -1,20 +1,24 @@
 <template>
   <div id="app" class="app h-screen flex font-sans overflow-hidden">
     <div
-      class="sidebar bg-white border-r-2 h-screen flex-no-shrink overflow-auto flex flex-col"
+      class="fixed pin-l pin-r pin-b pin-t bg-black z-10 opacity-75 "
+      @click="showSidebar = !showSidebar;"
+      v-if="showSidebar && isMobile"
+    ></div>
+    <div
+      ref="sidebar"
+      v-if="showSidebar"
+      class="sidebar bg-white z-20 border-r-2 h-screen flex-no-shrink overflow-auto flex flex-col"
+      :class="{ fixed: isMobile }"
     >
-      <h1 class="font-normal">
-        <a href="#" class="logo">
-          <img
-            src="./assets/logo.png"
-            class="-mt-6 -mb-4 -ml-4"
-            alt="PrettyHtml"
-          />
-        </a>
-      </h1>
+      <a href="#" class="bg-resd text-center">
+        <img src="./assets/logo.png" class="w-48 px-4 py-3" alt="PrettyHtml" />
+      </a>
       <div class="settings px-4 text-grey-darkest">
         <div class="section">
-          <p class="text-sm text-center">The formatter for the modern web</p>
+          <p class="text-sm text-center mt-3">
+            The formatter for the modern web
+          </p>
           <h3
             class="section-name mt-8 font-medium tracking-wide text-xxs text-grey-dark uppercase"
           >
@@ -57,8 +61,7 @@
             :class="{ 'opacity-50': opts.useTabs }"
           >
             <div class="setting-label w-32 text-sm">
-              {{ opts.useTabs ? "Tab" : "Space" }}
-              width
+              {{ opts.useTabs ? "Tab" : "Space" }} width
             </div>
             <div class="setting-input w-16 ml-4">
               <input
@@ -78,9 +81,7 @@
             <AppToggle v-model="opts.singleQuote" class="ml-4"></AppToggle>
           </div>
           <div class="section-item flex items-center">
-            <div class="setting-label w-32 text-sm text-grey">
-              Wrap Attributes
-            </div>
+            <div class="setting-label w-32 text-sm ">Wrap Attributes</div>
             <AppToggle v-model="opts.wrapAttributes" class="ml-4"></AppToggle>
           </div>
           <div class="section-item flex items-center">
@@ -140,59 +141,32 @@
         </div>
       </div>
     </div>
+
     <div class="content bg-white flex flex-1 flex-col overflow-hidden">
-      <header class="header border-b-2 flex items-center justify-between p-4">
-        <span class="text-sm flex items-center">
-          <span class="text-xs text-grey-dark font-medium uppercase p-2">
-            Examples
-          </span>
-          <button
-            @click="example('html');"
-            class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
-          >
-            HTML5
-          </button>
-          <button
-            @click="example('vue');"
-            class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
-          >
-            VUE
-          </button>
-          <button
-            @click="example('angular');"
-            class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
-          >
-            ANGULAR
-          </button>
-          <button
-            @click="example('svelte');"
-            class="bg-grey-lighter text-grey-darker font-medium text-xs p-2 hover:bg-grey-darker hover:text-white rounded mx-1 focus:outline-none focus:shadow-outline"
-          >
-            SVELTE
-          </button>
-        </span>
+      <header class="header border-b-2 flex items-center px-4 py-3">
+        <button
+          class="hamburger focus:outline-none text-grey-darker hover:text-black"
+          @click="showSidebar = !showSidebar;"
+        >
+          <!-- prettier-ignore -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><g fill="currentColor"><path v-if="showSidebar" d="M20.05 11H5.91l1.3-1.29a1 1 0 0 0-1.42-1.42l-3 3a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42L5.91 13h14.14a1 1 0 0 0 .95-.95V12a1 1 0 0 0-.95-1z"/><rect x="3" y="11" width="18" height="2" rx=".95" ry=".95"/><rect x="3" y="17" width="18" height="2" rx=".95" ry=".95"/><rect x="3" y="5" width="18" height="2" rx=".95" ry=".95"/></g></svg>
+        </button>
+        <div v-if="!showSidebar" class="logo-mobile ml-6 flex items-center">
+          <a href="#" class="logo w-32 mt-px">
+            <img src="./assets/logo.png" class="" alt="PrettyHtml" />
+          </a>
+        </div>
+        <AppExampleButtons class="ml-auto hidden lg:flex" />
         <button
           @click="prettify"
-          class="ml-2 bg-grey-lighter text-grey-darker uppercase hover:bg-grey-darker hover:text-white font-bold text-sm py-2 px-6 rounded-full inline-flex items-center tracking-wide focus:outline-none focus:shadow-outline"
+          class="ml-auto bg-grey-lighter text-grey-darker uppercase hover:bg-grey-darker hover:text-white font-bold text-sm py-2 px-6 rounded-full inline-flex items-center tracking-wide focus:outline-none focus:shadow-outline"
         >
-          <svg
-            class="stroke-current w-3 h-3 mr-2"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="9971 -24 8.766 10.985"
-          >
-            <path
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M9971.5-23.5l7.766 4.992-4.5 2.892-3.266 2.101z"
-            ></path>
-          </svg>
+          <!-- prettier-ignore -->
+          <svg class="stroke-current w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="9971 -24 8.766 10.985"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9971.5-23.5l7.766 4.992-4.5 2.892-3.266 2.101z"/></svg>
           <span class="">Run</span>
         </button>
       </header>
-      <main class="section--main flex-1 flex min-h-0">
+      <main class="section--main flex-1 flex flex-col lg:flex-row min-h-0">
         <div
           class="editor flex-no-shrink flex-1 flex flex-col overflow-hidden pt-4"
         >
@@ -207,19 +181,8 @@
               class="absolute text-grey-dark flex items-center pin-r pin-t -mt-2 mr-2 p-1 font-normal hover:text-grey-darkest rounded mx-1 focus:outline-none focus:shadow-outline"
               title="clear text"
             >
-              <svg
-                class="w-4 h-4 mt-px"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
+              <!-- prettier-ignore -->
+              <svg class="w-4 h-4 mt-px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
             </button>
           </header>
           <prism-editor
@@ -231,37 +194,18 @@
           />
         </div>
         <div
-          class="output border-l-2 flex-no-shrink flex-1 flex flex-col overflow-hidden pt-4"
+          class="output border-t-2 lg:border-t-0 lg:border-l-2 flex-no-shrink flex-1 flex flex-col overflow-hidden pt-4"
         >
+          <!-- prettier-ignore -->
           <header class="flex relative">
-            <h3
-              class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase"
-            >
+            <h3 class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase">
               Output
             </h3>
-            <button
-              class="btn-copy absolute text-grey-dark flex items-center pin-r pin-t -mt-2 mr-2 p-1 font-normal uppercase text-xs hover:text-grey-darkest rounded mx-1 focus:outline-none focus:shadow-outline group"
-            >
-              <span
-                class="opacity-0 font-semibold mr-2 text-grey-dark group-hover:opacity-100"
-              >
+            <button class="btn-copy absolute text-grey-dark flex items-center pin-r pin-t -mt-2 mr-2 p-1 font-normal uppercase text-xs hover:text-grey-darkest rounded mx-1 focus:outline-none focus:shadow-outline group">
+              <span class="opacity-0 font-semibold mr-2 text-grey-dark group-hover:opacity-100">
                 Copy to clipboard
               </span>
-              <svg
-                class="w-5 h-5 mt-px"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
-                ></path>
-                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-              </svg>
+              <svg class="w-5 h-5 mt-px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
             </button>
           </header>
           <prism-editor
@@ -290,6 +234,9 @@
           />
         </div>
       </main>
+      <AppExampleButtons
+        class="w-full border-t-2 flex lg:hidden overflow-x-scroll p-2"
+      />
     </div>
   </div>
 </template>
@@ -301,7 +248,9 @@ import "./assets/styles.css";
 import { startWorkers, getWorkers } from "./workers";
 import PrismEditor from "vue-prism-editor";
 import AppToggle from "./components/AppToggle";
+import AppExampleButtons from "./components/AppExampleButtons";
 import Examples from "./utils/Examples.js";
+import EventBus from "./EventBus.js";
 
 startWorkers();
 const defaultOpts = {
@@ -316,10 +265,13 @@ export default {
   name: "app",
   components: {
     AppToggle,
+    AppExampleButtons,
     PrismEditor,
   },
   data() {
     return {
+      isMobile: false,
+      showSidebar: true,
       prettifier: null,
       prettyHtmlVersion: preval`
         module.exports = require('../package.json').devDependencies['@starptech/prettyhtml'].substr(1);
@@ -336,6 +288,21 @@ export default {
     new ClipboardJS(".btn-copy", {
       text: () => this.result,
     });
+    const checkScreenSize = () => {
+      if (window.innerWidth <= 576) {
+        this.isMobile = true;
+        if (this.showSidebar) this.showSidebar = false;
+      } else if (window.innerWidth <= 991) {
+        this.isMobile = false;
+        if (this.showSidebar) this.showSidebar = false;
+      } else {
+        this.isMobile = false;
+        if (!this.showSidebar) this.showSidebar = true;
+      }
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    EventBus.$on("example", this.example);
   },
   methods: {
     async prettify() {
@@ -393,5 +360,12 @@ select {
   background-size: 1rem auto;
   background-position: right 0.25rem center;
   padding-right: 1rem;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.35s ease-in-out;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: translate3d(-101%, 0, 0);
 }
 </style>
