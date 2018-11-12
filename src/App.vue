@@ -21,7 +21,7 @@
         </a>
         <div class="settings px-4 text-grey-darkest">
           <div class="section">
-            <p class="text-sm text-center mt-3">
+            <p class="text-sm text-center mt-1">
               The formatter for the modern web
             </p>
             <h3
@@ -176,7 +176,7 @@
           </a>
         </div>
         <div class="ml-auto hidden lg:flex items-center">
-          <span class="text-xs text-grey-dark font-medium uppercase p-2">
+          <span class="text-xs text-grey-dark font-medium uppercase pr-2">
             Examples
           </span>
           <AppExampleButtons />
@@ -240,7 +240,7 @@
             readonly
             :line-numbers="linenumbers"
           />
-          <header class="flex relative" v-show="debugMsg">
+          <header class="flex relative pt-4 border-t-2" v-show="debugMsg">
             <h3
               class="px-4 flex-no-shrink font-medium tracking-wide text-xxs text-grey-dark uppercase"
             >
