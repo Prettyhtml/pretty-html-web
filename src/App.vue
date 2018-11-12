@@ -1,148 +1,167 @@
 <template>
   <div id="app" class="app h-screen flex font-sans overflow-hidden">
     <div
-      class="fixed pin-l pin-r pin-b pin-t bg-black z-10 opacity-75 "
-      @click="showSidebar = !showSidebar;"
+      class="fixed h-screen w-screen bg-black z-20 opacity-75 overflow-hidden"
       v-if="showSidebar && isMobile"
+      @click="showSidebar = !showSidebar;"
     ></div>
+
     <div
-      ref="sidebar"
-      v-if="showSidebar"
-      class="sidebar bg-white z-20 border-r-2 h-screen flex-no-shrink overflow-auto flex flex-col"
+      class="sidebar bg-white z-30 border-r-2 h-screen"
       :class="{ fixed: isMobile }"
+      v-if="showSidebar"
     >
-      <a href="#" class="bg-resd text-center">
-        <img src="./assets/logo.png" class="w-48 px-4 py-3" alt="PrettyHtml" />
-      </a>
-      <div class="settings px-4 text-grey-darkest">
-        <div class="section">
-          <p class="text-sm text-center mt-3">
-            The formatter for the modern web
-          </p>
-          <h3
-            class="section-name mt-8 font-medium tracking-wide text-xxs text-grey-dark uppercase"
-          >
-            Editor
-          </h3>
-          <div class="section-item flex items-center mt-4">
-            <div class="setting-label w-32 text-sm">Source type</div>
-            <div class="setting-input flex-1 ml-4">
-              <select
-                class="bg-grey-lighter text-grey-darker border font-medium w-full text-sm py-1 pl-2 rounded focus:outline-none focus:shadow-outline"
-              >
-                <option value="markup">HTML-like</option>
-                <option value="js" disabled>Javascript</option>
-              </select>
-            </div>
-          </div>
-          <div class="section-item flex items-center mt-1">
-            <div class="setting-label w-32 text-sm">Line Numbers</div>
-            <AppToggle v-model="linenumbers" class="ml-4"></AppToggle>
-          </div>
-        </div>
-        <div class="section mt-8">
-          <h3
-            class="section-name font-medium tracking-wide text-xxs text-grey-dark uppercase"
-          >
-            Settings
-          </h3>
-          <div class="section-item flex items-center mt-4">
-            <div class="setting-label w-32 text-sm">Print width</div>
-            <div class="setting-input w-16 ml-4">
-              <input
-                v-model.number="opts.printWidth"
-                class="bg-grey-lighter text-grey-darkest border font-medium w-full text-sm py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                type="number"
-              />
-            </div>
-          </div>
-          <div
-            class="section-item flex items-center mt-2"
-            :class="{ 'opacity-50': opts.useTabs }"
-          >
-            <div class="setting-label w-32 text-sm">
-              {{ opts.useTabs ? "Tab" : "Space" }} width
-            </div>
-            <div class="setting-input w-16 ml-4">
-              <input
-                v-model.number="opts.tabWidth"
-                class="bg-grey-lighter text-grey-darkest border font-medium w-full text-sm py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                :disabled="opts.useTabs"
-                type="number"
-              />
-            </div>
-          </div>
-          <div class="section-item flex items-center mt-1">
-            <div class="setting-label w-32 text-sm">Use Tabs</div>
-            <AppToggle v-model="opts.useTabs" class="ml-4"></AppToggle>
-          </div>
-          <div class="section-item flex items-center">
-            <div class="setting-label w-32 text-sm">Single Quote</div>
-            <AppToggle v-model="opts.singleQuote" class="ml-4"></AppToggle>
-          </div>
-          <div class="section-item flex items-center">
-            <div class="setting-label w-32 text-sm ">Wrap Attributes</div>
-            <AppToggle v-model="opts.wrapAttributes" class="ml-4"></AppToggle>
-          </div>
-          <div class="section-item flex items-center">
-            <div class="setting-label w-32 text-sm text-grey">Use Prettier</div>
-            <AppToggle
-              v-model="opts.usePrettier"
-              class="ml-4"
-              disabled
-            ></AppToggle>
-          </div>
-        </div>
-        <button
-          @click="resetToDefaults"
-          class="mt-6 text-xs text-grey-dark hover:text-grey-darkest"
-        >
-          Reset to defaults
-        </button>
-      </div>
-      <div class="about mt-auto pt-8 text-grey-dark">
-        <div class="section px-4 my-4">
-          <div class="flex justify-between">
-            <h3 class="section-name font-medium text-xxs uppercase">About</h3>
-            <span class="font-medium text-xxs text-grey">
-              {{ prettyHtmlVersion }}
-            </span>
-          </div>
-          <div class="section-item leading-normal flex items-center mt-4">
-            <p class="text-sm font-normal">
-              Offline Playground for
-              <a
-                href="https://github.com/prettyhtml/prettyhtml"
-                class="no-underline font-bold text-grey-dark"
-                target="_blank"
-              >
-                Prettyhtml
-              </a>
-              <br />
-              Source code on
-              <a
-                href="https://github.com/prettyhtml/pretty-html-web"
-                class="no-underline font-bold text-grey-dark"
-                target="_blank"
-              >
-                GitHub
-              </a>
-              <br />
-              Built w/ Vue &middot; by
-              <a
-                href="https://www.mesutkoca.com"
-                class="no-underline font-bold text-grey-dark"
-                target="_blank"
-              >
-                Mesut Koca
-              </a>
+      <div class="overflow-auto flex flex-col h-full">
+        <a href="#" class="text-center">
+          <img
+            src="./assets/logo.png"
+            class="w-48 px-4 py-3"
+            alt="PrettyHtml"
+          />
+        </a>
+        <div class="settings px-4 text-grey-darkest">
+          <div class="section">
+            <p class="text-sm text-center mt-3">
+              The formatter for the modern web
             </p>
+            <h3
+              class="section-name mt-8 font-medium tracking-wide text-xxs text-grey-dark uppercase"
+            >
+              Editor
+            </h3>
+            <div class="section-item flex items-center mt-4">
+              <div class="setting-label w-32 text-sm">Source type</div>
+              <div class="setting-input flex-1 ml-4">
+                <select
+                  class="bg-grey-lighter text-grey-darker border font-medium w-full text-sm py-1 pl-2 rounded focus:outline-none focus:shadow-outline"
+                >
+                  <option value="markup">HTML-like</option>
+                  <option value="js" disabled>Javascript</option>
+                </select>
+              </div>
+            </div>
+            <div class="section-item flex items-center mt-1">
+              <div class="setting-label w-32 text-sm">Line Numbers</div>
+              <AppToggle v-model="linenumbers" class="ml-4"></AppToggle>
+            </div>
+          </div>
+          <div class="section mt-8">
+            <h3
+              class="section-name font-medium tracking-wide text-xxs text-grey-dark uppercase"
+            >
+              Settings
+            </h3>
+            <div class="section-item flex items-center mt-4">
+              <div class="setting-label w-32 text-sm">Print width</div>
+              <div class="setting-input w-16 ml-4">
+                <input
+                  v-model.number="opts.printWidth"
+                  class="bg-grey-lighter text-grey-darkest border font-medium w-full text-sm py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                  type="number"
+                />
+              </div>
+            </div>
+            <div
+              class="section-item flex items-center mt-2"
+              :class="{ 'opacity-50': opts.useTabs }"
+            >
+              <div class="setting-label w-32 text-sm">
+                {{ opts.useTabs ? "Tab" : "Space" }} width
+              </div>
+              <div class="setting-input w-16 ml-4">
+                <input
+                  v-model.number="opts.tabWidth"
+                  class="bg-grey-lighter text-grey-darkest border font-medium w-full text-sm py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                  :disabled="opts.useTabs"
+                  type="number"
+                />
+              </div>
+            </div>
+            <div class="section-item flex items-center mt-1">
+              <div class="setting-label w-32 text-sm">Use Tabs</div>
+              <AppToggle v-model="opts.useTabs" class="ml-4"></AppToggle>
+            </div>
+            <div class="section-item flex items-center">
+              <div class="setting-label w-32 text-sm">Single Quote</div>
+              <AppToggle v-model="opts.singleQuote" class="ml-4"></AppToggle>
+            </div>
+            <div class="section-item flex items-center">
+              <div class="setting-label w-32 text-sm ">Wrap Attributes</div>
+              <AppToggle v-model="opts.wrapAttributes" class="ml-4"></AppToggle>
+            </div>
+            <div class="section-item flex items-center">
+              <div class="setting-label w-32 text-sm text-grey">
+                Use Prettier
+              </div>
+              <AppToggle
+                v-model="opts.usePrettier"
+                class="ml-4"
+                disabled
+              ></AppToggle>
+            </div>
+          </div>
+          <button
+            @click="resetToDefaults"
+            class="mt-2 text-xs text-grey-dark hover:text-grey-darkest"
+          >
+            Reset to defaults
+          </button>
+        </div>
+
+        <div class="section mt-8 px-2 lg:hidden">
+          <h3
+            class="section-name px-2 mb-2 font-medium tracking-wide text-xxs text-grey-dark uppercase"
+          >
+            Examples
+          </h3>
+          <AppExampleButtons
+            class="w-full p-2 flex flex-col flex-no-shrink flex-wrap"
+          />
+        </div>
+        <div class="about mt-auto pt-8 text-grey-dark">
+          <div class="section px-4 my-4">
+            <div class="flex justify-between">
+              <h3 class="section-name font-medium text-xxs uppercase">About</h3>
+              <span class="font-medium text-xxs text-grey">
+                {{ prettyHtmlVersion }}
+              </span>
+            </div>
+            <div class="section-item leading-normal flex items-center mt-4">
+              <p class="text-sm font-normal">
+                Offline Playground for
+                <a
+                  href="https://github.com/prettyhtml/prettyhtml"
+                  class="no-underline font-bold text-grey-dark"
+                  target="_blank"
+                >
+                  Prettyhtml
+                </a>
+                <br />
+                Source code on
+                <a
+                  href="https://github.com/prettyhtml/pretty-html-web"
+                  class="no-underline font-bold text-grey-dark"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+                <br />
+                Built w/ Vue &middot; by
+                <a
+                  href="https://www.mesutkoca.com"
+                  class="no-underline font-bold text-grey-dark"
+                  target="_blank"
+                >
+                  Mesut Koca
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="content bg-white flex flex-1 flex-col overflow-hidden">
+    <div class="content bg-white flex flex-1 flex-col overflow-hidden z-10">
       <header class="header border-b-2 flex items-center px-4 py-3">
         <button
           class="hamburger focus:outline-none text-grey-darker hover:text-black"
@@ -156,7 +175,12 @@
             <img src="./assets/logo.png" class="" alt="PrettyHtml" />
           </a>
         </div>
-        <AppExampleButtons class="ml-auto hidden lg:flex" />
+        <div class="ml-auto hidden lg:flex items-center">
+          <span class="text-xs text-grey-dark font-medium uppercase p-2">
+            Examples
+          </span>
+          <AppExampleButtons />
+        </div>
         <button
           @click="prettify"
           class="ml-auto bg-grey-lighter text-grey-darker uppercase hover:bg-grey-darker hover:text-white font-bold text-sm py-2 px-6 rounded-full inline-flex items-center tracking-wide focus:outline-none focus:shadow-outline"
@@ -234,9 +258,6 @@
           />
         </div>
       </main>
-      <AppExampleButtons
-        class="w-full border-t-2 flex lg:hidden overflow-x-scroll p-2"
-      />
     </div>
   </div>
 </template>
@@ -268,6 +289,7 @@ export default {
     AppExampleButtons,
     PrismEditor,
   },
+
   data() {
     return {
       isMobile: false,
@@ -288,17 +310,19 @@ export default {
     new ClipboardJS(".btn-copy", {
       text: () => this.result,
     });
+    let screenSize = 0;
     const checkScreenSize = () => {
-      if (window.innerWidth <= 576) {
+      if (screenSize !== window.innerWidth && window.innerWidth <= 576) {
         this.isMobile = true;
-        if (this.showSidebar) this.showSidebar = false;
-      } else if (window.innerWidth <= 991) {
+        this.showSidebar = false;
+      } else if (window.innerWidth > 576 && window.innerWidth <= 991) {
         this.isMobile = false;
-        if (this.showSidebar) this.showSidebar = false;
-      } else {
+        this.showSidebar = false;
+      } else if (window.innerWidth > 991) {
         this.isMobile = false;
-        if (!this.showSidebar) this.showSidebar = true;
+        this.showSidebar = true;
       }
+      screenSize = window.innerWidth;
     };
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
@@ -338,6 +362,10 @@ export default {
 </script>
 
 <style>
+.sidebar {
+  -webkit-overflow-scrolling: touch;
+}
+
 .section--main {
   background: #fafafa;
   max-width: 100vw;
