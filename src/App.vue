@@ -362,10 +362,6 @@ export default {
 </script>
 
 <style>
-.sidebar {
-  -webkit-overflow-scrolling: touch;
-}
-
 .section--main {
   background: #fafafa;
   max-width: 100vw;
@@ -375,6 +371,7 @@ export default {
 }
 .sidebar {
   width: 17.5rem;
+  -webkit-overflow-scrolling: touch;
 }
 .debug-editor {
   height: 150px;
@@ -388,12 +385,5 @@ select {
   background-size: 1rem auto;
   background-position: right 0.25rem center;
   padding-right: 1rem;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.35s ease-in-out;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transform: translate3d(-101%, 0, 0);
 }
 </style>
