@@ -679,24 +679,24 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@starptech/hast-util-from-webparser@^0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@starptech/hast-util-from-webparser/-/hast-util-from-webparser-0.8.3.tgz#079f5174f2ca4cfc3e8f4c312b59664357e1ceda"
-  integrity sha512-YvgEE72ncTPNF0mf5GEFY8vVADEX9YG6dYmH4kpQuCv8PPdHJs9qY+WB2KLAiw8tYywWkc3nr9kVLv0yMOcsFw==
+"@starptech/hast-util-from-webparser@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@starptech/hast-util-from-webparser/-/hast-util-from-webparser-0.8.5.tgz#789b269234fb3ce07c4b6760a13b90d56d8f7b0c"
+  integrity sha512-22GiCE1RfGGDOwwtj6eIqJcU4BibveK1HRzZ3OHnZllIxWveRsjQryeTOxqZbI8yO9Az7bO4lwqgq6tthsdOIg==
   dependencies:
     "@starptech/prettyhtml-hastscript" "^0.8.1"
-    "@starptech/webparser" "^0.8.3"
+    "@starptech/webparser" "^0.8.5"
     property-information "^5.0.1"
 
-"@starptech/prettyhtml-formatter@^0.8.4":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.8.4.tgz#d7c405f24cd7bffa33043179f1d5843ed08630ca"
-  integrity sha512-HlqTAzN+ifanN8616AhRfUMqtzHWvUNwLg8Uzoc0j3vWX+rQVc+td/ZWSXsIzzv0sRi4f2rJl8sVtdAJlMZWKg==
+"@starptech/prettyhtml-formatter@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-formatter/-/prettyhtml-formatter-0.8.5.tgz#7b442656d5fd9e5ed02636eab6abcd3d8ab2defe"
+  integrity sha512-l+byzOsQDsGU260+rkd8TmBzfrspxY9K9Cgs1gNtU+TzKailJ3IOyg+H580sfGPZkGJx8RblrQEIrZsCP1sn2g==
   dependencies:
     "@starptech/prettyhtml-hast-to-html" "^0.8.1"
     "@starptech/rehype-minify-whitespace" "^0.8.1"
-    "@starptech/rehype-webparser" "^0.8.3"
-    "@starptech/webparser" "^0.8.3"
+    "@starptech/rehype-webparser" "^0.8.5"
+    "@starptech/webparser" "^0.8.5"
     hast-util-is-element "^1.0.1"
     hast-util-to-string "^1.0.1"
     html-void-elements "^1.0.3"
@@ -746,15 +746,15 @@
     hast-util-has-property "^1.0.0"
     unist-util-visit "^1.0.0"
 
-"@starptech/prettyhtml@^0.8.4":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.8.4.tgz#f7ff6049572df79b02a780b34630c086c8524586"
-  integrity sha512-EZZdcORFEcszU3WLHfCT0KL0Ft/a73tPDT7fKT25fsjFo4asY0/aeYIYGFCLnAPamb1PQGq7lS/+3yLwWAJPkQ==
+"@starptech/prettyhtml@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.8.5.tgz#cef5794ec0e9fca4c0fabdee8ef4129ba62154a3"
+  integrity sha512-/5dqJ4G4BVWi7loHYwTbGSPFIZgEaS3dakGk8dDyihKCthn/e1gD5Ut2eARsqWz2eN/dTW4qGPe/FZ0l4Jmi1A==
   dependencies:
-    "@starptech/prettyhtml-formatter" "^0.8.4"
+    "@starptech/prettyhtml-formatter" "^0.8.5"
     "@starptech/prettyhtml-sort-attributes" "^0.8.1"
-    "@starptech/rehype-webparser" "^0.8.3"
-    "@starptech/webparser" "^0.8.3"
+    "@starptech/rehype-webparser" "^0.8.5"
+    "@starptech/webparser" "^0.8.5"
     meow "^5.0.0"
     prettier "^1.14.3"
     rehype-sort-attribute-values "^1.0.1"
@@ -778,18 +778,18 @@
     unist-util-is "^2.1.2"
     unist-util-modify-children "^1.1.2"
 
-"@starptech/rehype-webparser@^0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@starptech/rehype-webparser/-/rehype-webparser-0.8.3.tgz#bee5a6cd0d3af63004ff8f53983c880c1085d4a7"
-  integrity sha512-jDz6QkQrvXECtdw03enbcmtmyHGKW9293hUZcvkjgRxi2mZEq1tSBN9+lhi7wXw/Dp2TKqfMgq/mAZ4kBIKq6Q==
+"@starptech/rehype-webparser@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@starptech/rehype-webparser/-/rehype-webparser-0.8.5.tgz#6036419a3f71e3d1e073e743cabbe60e67e1d964"
+  integrity sha512-FptIi3XZsrmpkdAaRxrg6H1fmHEnVe/phZM8yomG2a2kSibitYCOhjGLLUXGdMf0YPWh9wZkKnI95zwUiXEnUw==
   dependencies:
-    "@starptech/hast-util-from-webparser" "^0.8.3"
-    "@starptech/webparser" "^0.8.3"
+    "@starptech/hast-util-from-webparser" "^0.8.5"
+    "@starptech/webparser" "^0.8.5"
 
-"@starptech/webparser@^0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@starptech/webparser/-/webparser-0.8.3.tgz#0d2e88b52aaae4b74b49a0e9ca1f2d9861258998"
-  integrity sha512-1Y2Ic+1RrUbLwnfHgtpguBgd/FVBHxRk71TRXd5j/HRSCn48UlCuVvj0zePjEMNFe6LV9HcowAOR7VK5T2tVaw==
+"@starptech/webparser@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@starptech/webparser/-/webparser-0.8.5.tgz#97ace480cf83e318b0cdcd212bef34712f229792"
+  integrity sha512-cKDkc48LWCz/3btrM2mCVEthdBmBZDTn1IRS8dcWqfjNWwMylEVtvzDUDG+OSs98hjzoFNhkW4P1+x8DO09Lng==
 
 "@vue/babel-preset-app@^3.1.0":
   version "3.1.1"
