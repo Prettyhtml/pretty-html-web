@@ -746,10 +746,10 @@
     hast-util-has-property "^1.0.0"
     unist-util-visit "^1.0.0"
 
-"@starptech/prettyhtml@^0.8.7":
-  version "0.8.7"
-  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.8.7.tgz#d12f8e442f04d2f7e5bca25f1d31e9360aa3f1a5"
-  integrity sha512-EztHhoeHa2A7h1VprOIxZkwkdYgrBmOMXpyj5y1+C6o3f5zPz9VZTd3yYG/UkpSXQNPLGtJQoMBhK+Qmjj7mNQ==
+"@starptech/prettyhtml@^0.8.8":
+  version "0.8.8"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml/-/prettyhtml-0.8.8.tgz#4ae114ca8acf8cb76b901e15de9644edd1eae1d9"
+  integrity sha512-JfQQCWWD6LH1AEiOY+U2dRUoM8vsjuv8iFhyAh3vp47UEdfRB9VreUi9DkIYHH2YbOc5qAIYP8bkeQoW9jBFWA==
   dependencies:
     "@starptech/prettyhtml-formatter" "^0.8.7"
     "@starptech/prettyhtml-sort-attributes" "^0.8.7"
