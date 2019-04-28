@@ -3,7 +3,7 @@
     <div
       class="fixed h-screen w-screen bg-black z-20 opacity-75 overflow-hidden"
       v-if="showSidebar && isMobile"
-      @click="showSidebar = !showSidebar;"
+      @click="showSidebar = !showSidebar"
     ></div>
 
     <div
@@ -170,7 +170,7 @@
       <header class="header border-b-2 flex items-center px-4 py-3">
         <button
           class="hamburger focus:outline-none text-grey-darker hover:text-black"
-          @click="showSidebar = !showSidebar;"
+          @click="showSidebar = !showSidebar"
         >
           <!-- prettier-ignore -->
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><g fill="currentColor"><path v-if="showSidebar" d="M20.05 11H5.91l1.3-1.29a1 1 0 0 0-1.42-1.42l-3 3a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42L5.91 13h14.14a1 1 0 0 0 .95-.95V12a1 1 0 0 0-.95-1z"/><rect x="3" y="11" width="18" height="2" rx=".95" ry=".95"/><rect x="3" y="17" width="18" height="2" rx=".95" ry=".95"/><rect x="3" y="5" width="18" height="2" rx=".95" ry=".95"/></g></svg>

@@ -9,26 +9,26 @@
     "bundle": "node ./scripts/browserified-prettyhtml.js"
   },
   "dependencies": {
-    "clipboard": "^2.0.1",
-    "prismjs": "^1.15.0",
-    "register-service-worker": "^1.5.2",
-    "tailwindcss": "^0.6.6",
-    "vue": "^2.5.17",
-    "vue-prism-editor": "^0.1.2"
+    "clipboard": "^2.0.4",
+    "prismjs": "^1.16.0",
+    "register-service-worker": "^1.6.2",
+    "tailwindcss": "^0.7.4",
+    "vue": "^2.6.10",
+    "vue-prism-editor": "^0.2.0"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.1.0",
-    "@starptech/prettyhtml": "^0.8.15",
-    "@vue/cli-plugin-babel": "^3.0.4",
-    "@vue/cli-plugin-eslint": "^3.0.4",
-    "@vue/cli-plugin-pwa": "^3.0.4",
-    "@vue/cli-service": "3.0.4",
-    "@vue/eslint-config-prettier": "^3.0.4",
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "@starptech/prettyhtml": "^0.9.0",
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-plugin-pwa": "^3.7.0",
+    "@vue/cli-service": "3.7.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
     "babel-plugin-preval": "^3.0.1",
     "browserify": "^16.2.3",
-    "purgecss-whitelister": "^2.2.0",
+    "purgecss-whitelister": "^2.4.0",
     "uglify-es": "^3.3.9",
-    "vue-template-compiler": "^2.5.17",
+    "vue-template-compiler": "^2.6.10",
     "workerize-loader": "^1.0.4"
   }
 }
